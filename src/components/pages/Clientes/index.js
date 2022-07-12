@@ -1,40 +1,38 @@
 import React from 'react';
 
-//Importando Components
-import Header from '../../layouts/Header'
-import Aside from '../../layouts/Aside'
+import Header from '../../layouts/Header';
+import Aside from '../../layouts/Aside';
 
-//Importando Icons
-import adicionarCadastro from '../../../assets/novo-adicionar.png'
-import editarCadastro from '../../../assets/editarCadastro.png'
+import adicionarCadastroIcon from '../../../assets/novo-adicionar.png'
+import verCadastroIcon from '../../../assets/editarCadastro.png'
 import { Link } from 'react-router-dom';
 
 export default function Clientes() {
- return (
-   <div>
-       <Header />
-       <Aside />
-       <h1 className=' ml-[22em] mt-[-15em] text-5xl font-bold '>Clientes</h1>
-       
-        <div className=' flex flex-row '>
-          
-        <Link to='/adicionar-cadastro'>
-        <div className=' ml-[30em] mt-[5em] border-2 w-[15em] text-center text-xl hover:scale-150 cursor-pointer rounded-md '>
-         <img src={adicionarCadastro} alt="adicionar-cadastro-icon" className=' ml-[100px] ' />
-         Adicionar Cadastro
-       </div>
+  return (
+    <div>
+      <Header />
+      <Aside />
+      <main className=' ml-[22em] mt-[-60em] w-full ' >
+        <h1 className=' ml-[15em] mt-10 mr-[auto] font-bold  text-[3em] '>CLIENTES</h1>
 
-        </Link>
+        <div className='flex flex-1 justify-center mr-[20em] p-[10em]  ' >
 
-       <div className=' ml-[5em] mt-[5em] border-2 w-[15em] text-center text-xl hover:scale-150 cursor-pointer rounded-md '>
-         <img src={editarCadastro} alt="editarCadastroIcon" className=' ml-[100px] ' />
-         Ver Cadastros
-       </div>
+          <Link to='/adicionar-cadastro' >
+            <div className=' border-[1px] w-[450px] text-center mr-[10em] hover:scale-125 cursor-pointer ' >
+              <img src={adicionarCadastroIcon} alt="adicionarcadastroicon" className=' ml-[10em] ' />
+              <h2 className=' text-[1.5em] ' >Adicionar Cadastro</h2>
+            </div>
+          </Link>
 
-       
+          <div className=' border-[1px] w-[450px] text-center mr-[5em] hover:scale-125 cursor-pointer ' >
+            <img src={verCadastroIcon} alt="adicionarcadastroicon" className=' ml-[10em] ' />
+            <h2 className=' text-[1.5em] ' >Ver Cadastro</h2>
+          </div>
 
         </div>
-      
-   </div>
- );
+
+      </main>
+
+    </div>
+  );
 }

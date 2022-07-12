@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 
-export default function Tabs() {
- return (
-   <div>
-       <h1>Dados Gerais</h1>
-   </div>
- );
-}
+const DadosGerais = () => {
+  return (
+    <div className=" border-2 border-[red] h-[45em]  ">
+      <p>DadosGerais</p>
+      
+      {/* First tab content will go here */}
+    </div>
+  );
+};
+export default DadosGerais;

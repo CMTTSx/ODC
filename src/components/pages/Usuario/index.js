@@ -14,7 +14,7 @@ export default function Usuario() {
        <Header />
        <Aside />
        
-        <div className=' ml-[17.5em] mt-[-15em] text-5xl font-bold '>
+        <div className=' ml-[17.5em] mt-[-17em] text-5xl font-bold '>
           <h1>Gerenciamento de Usuários</h1>
 
           <div className=' border mt-[2em] ml-[-7em] w-[25em] p-5 '>

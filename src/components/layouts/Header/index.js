@@ -16,6 +16,7 @@ export default function Header() {
        <h3 className=' mt-[2em]  ml-[-10%] '>FABÍOLA T. REIS</h3>
        <h2 className=' mt-[3.2em] ml-[-7em] font-bold '>RECEPCIONISTA</h2>
        
+       
    </div>
  );
 }

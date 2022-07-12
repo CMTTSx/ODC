@@ -16,7 +16,7 @@ export default function Aside() {
 
 
  return (
-   <div className=' w-[22em] h-[50em] bg-[#F1F4FE] border-2  text-center '>
+   <div className=' w-[22em] h-[62em] bg-[#F1F4FE] border-2  text-center '>
        
      <Link to="/">
         <button

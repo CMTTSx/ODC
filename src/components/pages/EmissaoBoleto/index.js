@@ -12,9 +12,9 @@ export default function EmissaoBoleto() {
       <Header />
       <Aside />
 
-      <h1 className=' bg-fundo font-bold text-center text-6xl ml-[4em] mt-[-12em] '>Emissão de Boleto</h1>
+      <h1 className=' bg-fundo h-[15em] font-bold text-center text-6xl ml-[5.8em] mt-[-15em] '>Emissão de Boleto</h1>
 
-      <div className=' ml-[25em] mr-[auto ] mt-[2em] border-1 w-[75%] h-[30em] bg-white shadow-2xl '>
+      <div className=' ml-[25em] mr-[auto ] mt-[-45em] border-1 w-[75%] h-[30em] bg-white shadow-2xl '>
       </div>
 
 
