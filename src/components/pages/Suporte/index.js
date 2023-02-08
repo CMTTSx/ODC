@@ -55,7 +55,7 @@ export default function Suporte() {
 
       </div>
 
-      <div className='bg-[#009cd0] text-white w-[40em] ml-[28.2em] mt-[-1.5em] text-center cursor-pointer '>
+      <div className='bg-[#009cd0] text-white w-[40em] ml-[30em] mt-[-1.5em] text-center cursor-pointer '>
         Por gentileza, detalhe o máximo possível para que possamos atende-lo melhor. Para consultar um ticket feito anteriormente, faça o login.
       </div>
 
