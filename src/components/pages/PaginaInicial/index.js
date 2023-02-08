@@ -59,7 +59,7 @@ export default function PaginaInicial() {
         <div className=' ml-[2em] mt-[-2.4em] text-2xl font-bold ' title='Nome do paciente(a)'>
           <h2> MAYARA SILVA SOUZA |</h2>
         </div>
-        <div className=' ml-[13em] mt-[-1.3em] text-2xl font-bold ' title='Nome do paciente(a)'>
+        <div className=' ml-[14em] mt-[-1.3em] text-2xl font-bold ' title='Nome do paciente(a)'>
           <h2>26 Anos e 7 Meses</h2>
         </div>
         <div className=' ml-[3em] mt-[-0.2em] text-1xl font-bold' title='Horário de atendimento'>
@@ -69,7 +69,7 @@ export default function PaginaInicial() {
           <h2>Em Atendimento</h2>
         </div>
 
-        <div className=' ml-[45em] mt-[-2.8em] text-1xl font-bold w-[8em] rounded-xl bg-tipo-procedimento p-0.5 ' title='Tipo de Atendimento'>
+        <div className=' ml-[45em] mt-[-2.8em] text-1xl font-bold w-[9em] rounded-xl bg-tipo-procedimento p-0.5 ' title='Tipo de Atendimento'>
           <h2>PROCEDIMENTOS</h2>
         </div>
 
