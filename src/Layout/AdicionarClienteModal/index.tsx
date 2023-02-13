@@ -548,6 +548,7 @@ export default function BasicModal() {
             id="outlined-required"
             sx={dataConfig}
             type="date"
+            label='Data de Nascimento'
           />
 
           <Box sx={sexoConfig}>
