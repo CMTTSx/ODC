@@ -15,7 +15,9 @@ function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
 const BreadCrumbs = {
   mt: 0.5,
   mb: 1.5,
-  ml: 15,
+  backgroundColor: '#fff',
+  height: 35,
+
 
   '@media (min-width: 320px) and (max-width: 1024px)': {
     mt: 0,

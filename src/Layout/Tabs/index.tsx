@@ -44,161 +44,127 @@ function a11yProps(index: number) {
   };
 }
 
-//Alinhar as TABS
-const BoxConfig = {
-  width: '50em',
-  ml: -10,
-  mr: 'auto',
+//Configurar TOPTAB EM ATENDIMENTO || FINALIZADO || TODOS
+const TabsConfig = {
+  ml: -20,
 
-  '@media (min-width: 320px) and (max-width: 375px)': {
-    width: '15em',
+  '@media (min-width: 320px) ': {
+    width: '300%',
+    ml: -53,
+    mt: -6,
+  },
+  '@media (min-width: 375px) ': {
+    width: '300%',
+    ml: -53,
+    mt: -6,
+  },
+  '@media (min-width: 768px) ': {
+    ml: -43,
+  },
+  '@media (min-width: 1024px) ': {
+    ml: -4,
+  },
+  '@media (min-width: 1280px) ': {
+    ml: -20,
+  },
+  '@media (min-width: 1440px) ': {
     ml: 40,
-    mt: -165,
   },
-  '@media (min-width: 375px) and (max-width: 383px)': {
-    width: '15em',
-    ml: 39.5,
-    mt: -165,
+  '@media (min-width: 1920px) ': {
+    ml: 5,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    width: '15em',
-    ml: 84,
-    mt: -160,
+  '@media (min-width: 2560px) ': {
+    ml: 36,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    width: '19em',
-    ml: 81,
-    mt: -140,
-  },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    width: '20em',
-    ml: 81,
-    mt: -135,
-  },
-  '@media (min-width: 600px) and (max-width: 767px)': {
-    width: '20em',
-    ml: 93,
-    mt: -135,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    width: '40em',
-    ml: 84,
-    mt: -130,
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    width: '50em',
-    ml: -2,
-    mt: 2,
-  },
-  '@media (min-width: 1025px) and (max-width: 1280px)': {
-    ml: -13,
-  },
-  '@media (min-width: 1281px) and (max-width: 1440px)': {
-    ml: -3,
-  },
-  '@media (min-width: 2560px)': {
-    width: '50em',
-    ml: -30,
-    mt: 20,
-  },
-  '@media (min-width: 3840px)': {
-    width: '50em',
-    ml: 25,
-    mt: 20,
-  },
+
 }
 
+//Alinhar as TABS
+const BoxConfig = {
+  mt: 10,
+  mb: 10,
+  mr: 'auto',
 
+  '@media (min-width: 320px) ': {
+    ml: 0,
+    width: '100%',
+  },
+  '@media (min-width: 425px) ': {
+    ml: 0,
+    width: '100%',
+  },
+  '@media (min-width: 599px) ': {
+    ml: 0,
+    width: '100%',
+  },
+  '@media (min-width: 992px) ': {
+    ml: 8,
+  },
+  '@media (min-width: 1024px) ': {
+    ml: 0,
+  },
+  '@media (min-width: 1920px) ': {
+    ml: 30,
+    width: '55%',
+  },
+  '@media (min-width: 2560px) ': {
+    ml: 45,
+  },
+  
+}
+
+// Button Adicionar Atendimento
 const ButtonConfig = {
-  ml: 30,
+  ml: -2,
   mt: 2,
   zIndex: 1,
 
-  '@media (min-width: 320px) and (max-width: 389px)': {
-    mt: 5,
+  '@media (min-width: 320px) ': {
     ml: 0,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    width: '15em',
-    ml: 4,
-    mt: 15,
-  },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    mt: 5,
-    ml: 3.5,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    mt: 10,
-    ml: 20,
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    mt: 10,
+  '@media (min-width: 599px) ': {
+    ml: 0,
   },
 
 }
 
-//Configurar TOPTAB
-const TabsConfig = {
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    ml: 3,
-    mt: 20,
-  },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    ml: 3,
-    mt: 25,
-  },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    ml: 3.5,
-  },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    mt: -5,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    width: 1,
-    ml: 25,
-  },
-  '@media (min-width: 3840px)': {
-    width: 1,
-    ml: 25,
-  },
 
-}
-// Em Atendimento
+// Button Em Atendimento
 const Tab1Config = {
   ml: 55,
 
-  '@media (min-width: 320px) and (max-width: 389px)': {
-    ml: -5,
-
-  },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    ml: 0,
-  },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    ml: 5,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    ml: 5,
+  '@media (min-width: 320px) ': {
+    ml: 52,
   },
 
 }
 
 //Finalizados
 const Tab2Config = {
+ 
+  '@media (min-width: 320px) ': {
+    visibility: 'hidden'
+  },
+  '@media (min-width: 599px) ': {
+    visibility: 'visible'
+  },
+}
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-   display: 'none',
+//Todos
+const Tab3Config = {
+ 
+  '@media (min-width: 320px) ': {
+    ml: -16,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
-    display: 'none',
+  '@media (min-width: 375px) ': {
+    ml: -14,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    display: 'none',
-
+  '@media (min-width: 425px) ': {
+    ml: -12,
   },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
+  '@media (min-width: 768px) ': {
+    ml: 0,
   },
-
 }
 
 
@@ -217,14 +183,14 @@ export default function BasicTabs() {
         <Tabs value={value} onChange={handleChange} sx={TabsConfig}>
           <Tab label="Em atendimento" {...a11yProps(0)} sx={Tab1Config} />
           <Tab label="Finalizado" {...a11yProps(1)} sx={Tab2Config} />
-          <Tab label="Todos" {...a11yProps(2)}/>
+          <Tab label="Todos" {...a11yProps(2)} sx={Tab3Config} />
         </Tabs>
       </Box>
       {/*Tabs 1*/}
       <TabPanel value={value} index={0}>
       <Box>
       <ServiceBar />
-      <Dummybar3 />
+      <Dummybar />
       </Box>
       <Button sx={ButtonConfig}><AtendimentoModal /> </Button>
       </TabPanel>
@@ -233,7 +199,6 @@ export default function BasicTabs() {
         <Box sx={{
           mt: 1,
         }}>
-          
         </Box>
         
         <Box sx={{
@@ -246,6 +211,11 @@ export default function BasicTabs() {
         <Box sx={{
             mt: 1,
         }}>
+          <Box sx={{
+          mt: 1
+        }}>
+        <ServiceBar />
+        </Box>
         <Dummybar />
         </Box>
 
@@ -267,15 +237,6 @@ export default function BasicTabs() {
         }}>
         <Dummybar4 />
         </Box>
-
-
-        <Box sx={{
-          mt: 1
-        }}>
-        <ServiceBar />
-        </Box>
-
-
 
       </TabPanel>
     </Box>

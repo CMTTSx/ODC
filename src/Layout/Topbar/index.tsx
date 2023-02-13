@@ -4,79 +4,40 @@ import { Box, Typography } from '@mui/material'
 
 const BoxConfig = {
   boxShadow: 5,
-  width: '30em',
+  width: '30%',
   display: 'flex',
-  ml: 55,
+  ml: 53,
   mr: 'auto',
   mt: 10,
 
-  '@media (min-width: 320px) and (max-width: 359px)': {
-    mt: -126,
-    mb: -20,
-    ml: 11  ,
-    width: '14em',
-
+  '@media (min-width: 320px) ': {
+    ml: 0.2,
+    mt: 1,
+    width: '100%',
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    mt: -126,
-    mb: -20,
-    ml: 13,
-    width: '14em',
-
+  '@media (min-width: 599px) ': {
+    ml: 0.2,
+    mt: 1,
+    width: '100%',
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    mt: -123,
-    mb: -20,
-    ml: 13.5  ,
-    width: '15em',
-
+  '@media (min-width: 992px) ': {
+    ml: 19,
+    width: '55%',
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    mt: -120,
-    ml: 14.5,
-    width: '15em',
-
+  '@media (min-width: 1024px) ': {
+    ml: 20,
+    mt: 4,
   },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    mt: -120,
-    mb: -10,
-    ml: 16,
-    width: '15em',
-
+  '@media (min-width: 1280px) ': {
+    ml: 25,
   },
-  '@media (min-width: 600px) and (max-width: 767px)': {
-    ml: 1,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    mt: 10,
-    mb: -10,
-    ml: 10,
-    width: '25em',
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    mt: 10,
-    mb: -3,
-    ml: 23,
-    width: '25em',
-  },
-  '@media (min-width: 1025px) and (max-width: 1280px)': {
+  '@media (min-width: 1440px) ': {
     ml: 30,
   },
-  '@media (min-width: 1281px) and (max-width: 1440px)': {
-    mt: 10,
-    mb: -3,
-    ml: 40,
-    width: '25em',
+  '@media (min-width: 2560px) ': {
+    ml: 45,
   },
-  '@media (min-width: 2560px)': {
-    mt: 30,
-    width: '50em',
-  },
-  '@media (min-width: 3840px)': {
-    mt: 30,
-    ml: '60%',
-    width: '70em',
-  },
+  
 
 }
 
@@ -117,12 +78,12 @@ export default function TopBar() {
         </Box>
 
         <Box sx={Box2}>
-          <Typography sx={{ display: 'inline', color: '#fcf403', fontSize: 26, fontWeight: 600, }}variant='h5'> 1 </Typography>
+          <Typography sx={{ display: 'inline', color: '#fc1703', fontSize: 26, fontWeight: 600, }}variant='h5'> 1 </Typography>
           <Typography sx={{ display: 'inline', fontWeight: 600, color: '#000000' }}>Cancelado</Typography>
         </Box>
 
         <Box sx={Box3}>
-          <Typography sx={{ display: 'inline', color: '#fc1703', fontSize: 26, fontWeight: 600, }}variant='h5'> 2 </Typography>
+          <Typography sx={{ display: 'inline', color: '#fcf403' , fontSize: 26, fontWeight: 600, }}variant='h5'> 2 </Typography>
           <Typography sx={{ display: 'inline', fontWeight: 600, color: '#000000' }}>Falta</Typography>
         </Box>
 
