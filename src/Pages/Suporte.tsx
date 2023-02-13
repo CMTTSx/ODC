@@ -126,6 +126,9 @@ const AdicionarNovoTicketButton = {
   '@media (min-width: 425px) ': {
     width: '351px',
   },
+  '@media (min-width: 600px) ': {
+    ml: 44,
+  },
   '@media (min-width: 768px) ': {
     ml: 33.6,
     width: '658px',
@@ -192,6 +195,9 @@ const TypoNovoTicket = {
   '@media (min-width: 425px) ': {
     ml: 1.7,
     width: '264px',
+  },
+  '@media (min-width: 600px) ': {
+    ml: 8.3,
   },
   '@media (min-width: 768px) ': {
     ml: 1.7,
@@ -266,6 +272,9 @@ const VerificarTicketButton = {
     mt: 8,
     width: '348px',
     p: 10,
+  },
+  '@media (min-width: 600px) ': {
+    ml: -56.5,
   },
   '@media (min-width: 768px) ': {
     ml: -63.6,
@@ -351,6 +360,9 @@ const TypoVerificarNovoTicket = {
     ml: 1.4,
     mt: -18.9,
     width: '263px',
+  },
+  '@media (min-width: 600px) ': {
+    ml: 8.5,
   },
   '@media (min-width: 768px) ': {
     ml: 1.4,
