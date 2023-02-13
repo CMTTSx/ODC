@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 //Import Components
 import Navbar from '../Layout/Navbar';
 import Sidebar from '../Layout/Sidebar';
-import Breadcrumbs from '../Layout/Breadcrumbs/Home';
+import Breadcrumbs from '../Layout/Breadcrumbs/Suporte';
 import AdicionarNovoTicketModal from '../Layout/AdicionarNovoTicketModal';
 import VerificarNovoTicketModal from '../Layout/VerificarNovoTicketModal';
 import { Typography } from '@mui/material';

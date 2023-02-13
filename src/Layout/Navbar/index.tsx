@@ -22,11 +22,11 @@ const BoxConfig = {
     overflow: 'hidden',
     height: '2.8rem',
   },
-  '@media (min-width: 600px) and (max-width: 904px)': {
+  '@media (min-width: 600px)': {
     overflow: 'hidden',
     height: '4rem',
   },
-  '@media (min-width: 905px) and (max-width: 1239px)': {
+  '@media (min-width: 905px)': {
     overflow: 'hidden',
     height: '5rem',
   },
@@ -85,27 +85,27 @@ const TypographyTopBar = {
   ml: 175,
   mt: 2.8,
 
-  '@media (min-width: 280px) and (max-width: 319px)': {
+  '@media (min-width: 280px)': {
     mt: 1.8,
     ml: 1,
   },
-  '@media (min-width: 320px) and (max-width: 424px)': {
+  '@media (min-width: 320px)': {
     mt: 1.8,
     ml: 6.5,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     mt: 1.8,
     ml: 13,
   },
-  '@media (min-width: 425px) and (max-width: 598px)': {
+  '@media (min-width: 425px)': {
     mt: 1.8,
     ml: 20,
   },
-  '@media (min-width: 500px) and (max-width: 768px)': {
+  '@media (min-width: 500px)': {
     mt: 1.8,
     ml: 28,
   },
-  '@media (min-width: 550px) and (max-width: 768px)': {
+  '@media (min-width: 550px)': {
     mt: 1.8,
     ml: 34,
   },
@@ -113,15 +113,15 @@ const TypographyTopBar = {
     mt: 1.8,
     ml: 40,
   },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
+  '@media (min-width: 768px)': {
     mt: 2.5,
     ml: 48,
   },
-  '@media (min-width: 1024px) and (max-width: 1279px)': {
+  '@media (min-width: 1024px)': {
     mt: 2.8,
     ml: 82,
   },
-  '@media (min-width: 1280px) and (max-width: 1439px)': {
+  '@media (min-width: 1280px)': {
     mt: 2.8,
     ml: 110,
   },
