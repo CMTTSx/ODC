@@ -16,54 +16,43 @@ const style = {
   boxShadow: 2,
   p: 4,
 
-  '@media (min-width: 320px) and (max-width: 359px)': {
-    ml: -37.7,
-    mt: -55,
+  '@media (min-width: 320px)': {
+    ml: 3,
+    mt: 0,
     width: 160,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    mt: -30,
-    ml: -38.3,
+  '@media (min-width: 360px)': {
     width: 190,
   },
-  '@media (min-width: 375px) and (max-width: 383px)': {
-    ml: -37.8,
-    mt: -58,
+  '@media (min-width: 375px)': {
     width: 220,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    ml: -37.5,
-    mt: -70,
-    width: 220,
-  },
-  '@media (min-width: 390px) and (max-width: 410px)': {
-    ml: -38,
-    mt: -70,
+  '@media (min-width: 390px)': {
     width: 240,
   },
-  '@media (min-width: 411px) and (max-width: 424px)': {
-    ml: -38,
-    mt: -75,
-    width: 240,
-  },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    ml: -38,
-    mt: -50,
+  '@media (min-width: 425px)': {
     width: 265,
   },
-  '@media (min-width: 768px) and (max-width: 799px)': {
-    ml: -20,
-    mt: -20,
+  '@media (min-width: 768px)': {
+    ml: 0,
+    mt: 0,
     width: 400,
   },
-  '@media (min-width: 800px) and (max-width: 1022px)': {
-    ml: -20,
-    mt: -50,
+  '@media (min-width: 800px)': {
+    mt: -15,
     width: 400,
   },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
+  '@media (min-width: 1024px)': {
     ml: 5,
     mt: -38,
+  },
+  '@media (min-width: 1280px)': {
+    ml: 5,
+    mt: 0,
+  },
+  '@media (min-width: 3840px)': {
+    ml: 0,
+    mt: -80,
   }
 
 };
@@ -78,27 +67,25 @@ const SairConfig = {
   "&:hover": {
     backgroundColor: '#db0b00'
   },
-  '@media (min-width: 320px) and (max-width: 359px)': {
+  '@media (min-width: 320px)': {
     ml: -53.5,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
+  '@media (min-width: 360px)': {
     ml: -51,
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
+  '@media (min-width: 375px)': {
     ml: -46,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
+  '@media (min-width: 390px)': {
     ml: -43,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     ml: -39,
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
+  '@media (min-width: 768px)': {
     ml: -23,
   },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    ml: 14,
-  },
+
 }
 
 const VerMaisConfig = {
@@ -110,20 +97,20 @@ const VerMaisConfig = {
   color: '#fff',
   fontWeight: 600,
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     ml: 15,
     visibility: 'hidden',
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
+  '@media (min-width: 375px)': {
     ml: 22,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
+  '@media (min-width: 390px)': {
     ml: 24,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     ml: 28,
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
+  '@media (min-width: 768px)': {
     ml: 43,
   },
 }

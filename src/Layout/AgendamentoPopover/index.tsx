@@ -19,32 +19,8 @@ export default function BasicPopover() {
   const id = open ? 'simple-popover' : undefined;
 
   const BoxConfig = {
-      ml: 147,
-      mt: -10,
-
-      '@media (min-width: 320px) and (max-width: 375px)': {
-        ml: 41.5,
-        mt: -8,
-    
-      },
-      '@media (min-width: 390px) and (max-width: 424px)': {
-        ml: 45,
-        mt: -9,
-      },
-      '@media (min-width: 425px) and (max-width: 767px)': {
-        ml: 48.5,
-        mt: -9,
-      },
-      '@media (min-width: 768px) and (max-width: 1023px)': {
-        ml: 87,
-        mt: -8.9,
-    
-      },
-      '@media (min-width: 1023px) and (max-width: 1024px)': {
-        ml: 105,
-        mt: -10,
-    
-      },
+      ml: 0,
+      mt: 0,
   }
 
   return (

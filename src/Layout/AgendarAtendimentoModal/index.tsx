@@ -18,47 +18,58 @@ const style = {
   borderRadius: 1,
   boxShadow: 2,
   p: 4,
-  '@media (min-width: 320px) and (max-width: 359px)': {
-    width: 164,
-    ml: 4.8,
+  '@media (min-width: 320px)': {
+    width: 180,
+    ml: 4,
     mt: 17,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    width: 164,
-    ml: 4.8,
+  '@media (min-width: 360px)': {
+    width: 200,
+    ml: 4,
     mt: 9,
   },
-  '@media (min-width: 375px) and (max-width: 383px)': {
-    width: 210,
-    ml: 5,
+  '@media (min-width: 375px)': {
+    width: 236,
+    ml: 3.5,
     mt: 17,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
+  '@media (min-width: 384px)': {
     width: 230,
-    ml: 5,
+    ml: 4,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
+  '@media (min-width: 390px)': {
     width: 230,
-    ml: 5,
+    ml: 3,
   },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    width: 230,
-    ml: 4.5,
+  '@media (min-width: 410px)': {
+    width: 250,
+    ml: 3.5,
   },
-  '@media (min-width: 600px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
+    width: 280,
+    ml: 4,
+  },
+  '@media (min-width: 600px)': {
     width: 263,
-    ml: 2.8,
+    ml: 0,
+    mt: -10,
   },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
+  '@media (min-width: 1024px)': {
     width: 400,
     ml: 0,
     mt: -25,
   },
+  '@media (min-width: 1280px)': {
+    width: 400,
+    ml: 0,
+    mt: 0,
+  },
   '@media (min-width: 2560px)': {
-    ml: -15,
+    ml: 0,
   },
   '@media (min-width: 3840px)': {
-    ml: 20,
+    ml: 0,
+    mt: -80,
     width: 1000,
   },
 
@@ -73,32 +84,52 @@ const AgendarButtonConfig = {
   "&:hover": {
     backgroundColor: '#05e340'
   },
-  '@media (min-width: 320px) and (max-width: 349px)': {
-    ml: -21.5,
+  '@media (min-width: 320px)': {
+    ml: -26,
     mt: -5,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    ml: -21,
+  '@media (min-width: 360px)': {
+    ml: -24.8,
     mt: -5,
   },
-  '@media (min-width: 375px) and (max-width: 383px)': {
-    ml: -24.5,
+  '@media (min-width: 375px)': {
+    ml: -24,
     mt: -5,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    ml: -23,
+  '@media (min-width: 384px)': {
+    ml: -24,
     mt: -3,
   },
-  '@media (min-width: 390px) and (max-width: 411px)': {
+  '@media (min-width: 390px)': {
     ml: -24,
     mt: 1,
   },
-  '@media (min-width: 412px) and (max-width: 424px)': {
-    ml: -24,
+  '@media (min-width: 410px)': {
+    ml: -22,
     mt: -3,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    ml: -23,
+  '@media (min-width: 425px)': {
+    ml: -21.2,
+    mt: -2,
+  },
+  '@media (min-width: 768px)': {
+    ml: -21,
+    mt: -2,
+  },
+  '@media (min-width: 810px)': {
+    ml: -21,
+    mt: -2,
+  },
+  '@media (min-width: 1024px)': {
+    ml: 0,
+    mt: -2,
+  },
+  '@media (min-width: 1280px)': {
+    ml: 0,
+    mt: -2,
+  },
+  '@media (min-width: 3840px)': {
+    ml: 74,
     mt: -2,
   },
   
@@ -116,32 +147,40 @@ const CancelButtonConfig = {
   },
 
 
-  '@media (min-width: 320px) and (max-width: 349px)': {
-    ml: -11.5,
-    mt: 6,
+  '@media (min-width: 320px)': {
+    ml: 0.8,
+    mt: -5,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    ml: -11.8,
-    mt: 6,
+  '@media (min-width: 360px)': {
+    ml: 0.8,
+    mt: -5,
   },
-  '@media (min-width: 375px) and (max-width: 383px)': {
+  '@media (min-width: 375px)': {
     ml: 2,
     mt: -5,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
+  '@media (min-width: 384px)': {
     ml: 3,
     mt: -3,
   },
-  '@media (min-width: 390px) and (max-width: 411px)': {
+  '@media (min-width: 390px)': {
     ml: 2,
     mt: 1,
   },
-  '@media (min-width: 412px) and (max-width: 424px)': {
-    ml:2,
+  '@media (min-width: 410px)': {
+    ml: 2,
     mt: -3,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     ml: 3,
+    mt: -2,
+  },
+  '@media (min-width: 768px)': {
+    ml: 2,
+    mt: -2,
+  },
+  '@media (min-width: 1024px)': {
+    ml: 1.3,
     mt: -2,
   },
 }

@@ -1,14 +1,75 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Button, TextField, Typography } from '@mui/material';
-import { BsSearch } from 'react-icons/bs'
 
 import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Clientes';
 import Sidebar from '../Layout/Sidebar';
 import AdicionarCliente from '../Layout/AdicionarClienteModal';
+import { BsSearch } from 'react-icons/bs';
 
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+const NavbarConfig = {
+  borderRadius: 0,
+  p: 0,
+  overflow: 'hidden',
+  display: 'flex',
+  bgcolor: '#000744',
+  mt: -1,
+  ml: -1,
+  pr: 2,
+  width: '100%',
+}
+
+const SidebarConfig = {
+  mt: -1,
+  ml: -1,
+  backgroundColor: 'transparent',
+  textAlign: 'inherit',
+  p: 0,
+  color: 'transparent',
+  boxShadow: 0,
+  width: '66%',
+}
+
+const ContentConfig = {
+
+  '@media (min-width: 320px) ': {
+    ml: 3.8,
+    width: '83%',
+    overflowY: 'auto',
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 599px) ': {
+    ml: 4,
+    width: '82%',
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 992px) ': {
+    ml: 5.3,
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 1024px) ': {
+    ml: 19,
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 1440px) ': {
+    width: '85%',
+    ml: 13,
+  },
+
+}
 
 
 function SearchButton() {
@@ -17,185 +78,96 @@ function SearchButton() {
 
 
 const Typoclientes = {
-  fontSize: 40,
+  fontSize: 35,
   fontWeight: 600,
   color: '#000000',
-  mt: 4,
-  ml: 60,
+  mt: 10,
+  ml: 'auto',
+  mr: 'auto',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    ml: 10,
-    mt: 5,
-    fontSize: 30,
-  },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    ml: 12,
-    mt: 5,
-    fontSize: 30,
-  },
-  '@media (min-width: 390px) and (max-width: 410px)': {
-    ml: 12,
-    mt: 5,
-    fontSize: 30,
-  },
-  '@media (min-width: 411px) and (max-width: 424px)': {
-    ml: 13,
-    mt: 5,
-    fontSize: 30,
-  },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    ml: 12,
-    mt: 5,
-    fontSize: 30,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    ml: 24,
-    mt: 5, 
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    ml: 35,
-    mt: 5,
-  },
-  '@media (min-width: 1280px) and (max-width: 1438px)': {
-    ml: 50,
-    mt: 5,
-  },
-  '@media (min-width: 1439px) and (max-width: 1440px)': {
-    ml: 50,
-    mt: 5,
-  },
-  '@media (min-width: 2560px)': {
-    ml: 80,
-    fontSize: 50,
-    mt: 10,
+  '@media (min-width: 320px) ': {
+    mt: 1,
+    mb: 3,
   },
 
 }
 
 const InputConfig = {
-   display: 'flex',
-   alignItems: 'flex-end',
-   width: '50em',
-   ml: -55,
-   mt: 30,
+  display: 'flex',
+  width: '50em',
+  ml: 'auto',
+  mr: 'auto',
+  mt: 0,
 
-
-   '@media (min-width: 320px) and (max-width: 374px)': {
-    ml: 11,
-    mt: -120,
-    width: '14.3em',
-   },
-   '@media (min-width: 375px) and (max-width: 389px)': {
-    ml: 11,
-    mt: -120,
-    width: '17.8em',
-   },
-   '@media (min-width: 390px) and (max-width: 410px)': {
-    ml: 11,
-    mt: -110,
-    width: '18em',
-   },
-   '@media (min-width: 411px) and (max-width: 424px)': {
-    ml: 11,
-    mt: -110,
-    width: '20em',
+  '@media (min-width: 320px) ': {
+    width: '100%',
   },
-   '@media (min-width: 425px) and (max-width: 599px)': {
-    ml: 11,
-    mt: -110,
-    width: '20em',
-   },
-   '@media (min-width: 768px) and (max-width: 1023px)': {
-    ml: 13,
-    mt: -110,
-    width: '85%',
-   },
-   '@media (min-width: 1439px) and (max-width: 1440px)': {
-    ml: -55,
-    mt: 30,
-    width: '45em',
-   },
-   '@media (min-width: 2560px)': {
-    ml: -50,
-    mt: 30,
-    width: '45em',
-   },
+  '@media (min-width: 1920px) ': {
+    width: '50em',
+  },
 
 }
 
 const ButtonAddConfig = {
-  ml: 29,
+  ml: 73,
   mt: 2,
 
+  '@media (min-width: 320px) ': {
+    ml: '44%',
+  },
+  '@media (min-width: 375px) ': {
+    ml: '53%',
+  },
+  '@media (min-width: 425px) ': {
+    ml: '59%',
+  },
+  '@media (min-width: 768px) ': {
+    ml: '77%',
+  },
+  '@media (min-width: 1280px) ': {
+    ml: '86.5%',
+  },
+  '@media (min-width: 1920px) ': {
+    ml: '39%',
+  },
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    ml: 23,
-  },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    ml: 30,
-  },
-  '@media (min-width: 390px) and (max-width: 410px)': {
-    ml: 31,
-  },
-  '@media (min-width: 411px) and (max-width: 424px)': {
-    ml: 34,
-  },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    ml: 35,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    ml: 79,
-  },
-  '@media (min-width: 1439px) and (max-width: 1440px)': {
-    ml: 19,
-  },
-  '@media (min-width: 2560px)': {
-    ml: 24,
-  },
 }
+
 
 
 export default function Clientes() {
   return (
-    <Box>
-      <Navbar />
-      <Breadcrumbs />
-      <Box sx={{ backgroundColor: '#fff' }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={2}  sx={{zIndex: 1000}}>
-            <Box><Sidebar /></Box>
-          </Grid>
-           
+    <Box sx={{ backgroundColor: '#F6F4F4' }}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={20}>
+          <Item sx={NavbarConfig}><Navbar /></Item>
+          <Breadcrumbs />
+        </Grid>
+        <Grid item xs={1} sx={{ zIndex: 1000, }}>
+          <Item sx={SidebarConfig}><Sidebar /></Item>
+        </Grid>
+        <Grid item xs={11}>
+          <Item sx={ContentConfig}>
 
-              <Typography sx={Typoclientes}>Clientes</Typography>
 
-
-              <Box sx={{ display: 'inline' }}>
-
-                <Box sx={{
-                  mt: 10,                  
-                }}>
+            <Typography sx={Typoclientes}>Clientes</Typography>
 
                 <Box sx={InputConfig}>
                   <TextField label="Digite o nome do Cliente" variant="standard" fullWidth={true} autoFocus={true} />
-                 <Button sx={{
-                  border: 1,
-                  cursor: 'pointer',
-                 }} onClick={SearchButton}> <BsSearch />
-                 </Button>
+                  <Button sx={{
+                    border: 1,
+                    cursor: 'pointer',
+                  }} onClick={SearchButton}> <BsSearch />
+                  </Button>
 
                 </Box>
-                    
-                </Box>
-
-                <Button sx={ButtonAddConfig}><AdicionarCliente /> </Button>
-
-                
 
 
-              </Box>
-          </Grid>
-        </Box>
+              <Button sx={ButtonAddConfig}><AdicionarCliente /> </Button>
+
+          </Item>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

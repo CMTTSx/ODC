@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Button, Typography } from '@mui/material';
-
 
 import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Agenda'
@@ -10,14 +11,71 @@ import Sidebar from '../Layout/Sidebar';
 import AgendarHorario from '../Layout/AgendarAtendimentoModal'
 import AgendamentoPopover from '../Layout/AgendamentoPopover'
 
-const GridConfig = {
-  zIndex: 1,
-  mt: 25,
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+const NavbarConfig = {
+  borderRadius: 0,
+  p: 0,
+  overflow: 'hidden',
+  display: 'flex',
+  bgcolor: '#000744',
+  mt: -1,
+  ml: -1,
+  pr: 2,
+  width: '100%',
+}
+
+const SidebarConfig = {
+  mt: -1,
+  ml: -1,
+  backgroundColor: 'transparent',
+  textAlign: 'inherit',
+  p: 0,
+  color: 'transparent',
+  boxShadow: 0,
+  width: '66%',
+}
+
+const ContentConfig ={
+
+  '@media (min-width: 320px) ': {
+    ml: 3.8,
+    width: '83%',
+    overflowY: 'auto',
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 599px) ': {
+    ml: 4,
+    width: '82%',
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 992px) ': {
+    ml: 5.3,
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 1024px) ': {
+    ml: 19,
+    overflowX: 'hidden',
+  },
+  '@media (min-width: 1440px) ': {
+    width: '85%',
+    ml: 13,
+  },
+
 }
 
 const BoxConfig = {
-  mt: 10,
-  ml: 25,
+  mt: 3,
+  mb: 1,
+  ml: 'auto',
+  mr: 'auto',
   border: 1,
   backgroundColor: '#fff',
   borderColor: '#cfcfcf',
@@ -25,157 +83,79 @@ const BoxConfig = {
   height: '63px',
   zIndex: 2,
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    width: 220,
-    ml: 5.4,
-    mt: 1,
+  '@media (min-width: 320px) ': {
+    width: '100%',
+    height: '40px',
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    ml: 13.5,
-    mt: 1,
+  '@media (min-width: 768px) ': {
+    width: '90%',
+    height: '40px',
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    width: 270,
-    ml: 12.5,
-    mt: 1,
+  '@media (min-width: 1440px) ': {
+    width: '50em',
+    height: '40px',
+  },
+  '@media (min-width: 1920px) ': {
+    width: '50em',
+    height: '45px',
   },
 
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    ml: 4,
-    mt: 1,
-    width: '18em',
-  },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    ml: 3,
-    mt: 1,
-    width: '20.5em',
-  },
-  '@media (min-width: 600px) and (max-width: 767px)': {
-    ml: 10,
-    mt: 1,
-    width: '20.5em',
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    width: '35em',
-    ml: 2,
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    ml: 10,
-    width: '40em',
-    mb: 1.5,
-  },
-  '@media (min-width: 1025px) and (max-width: 1280px)': {
-    ml: 20,
-    width: '40em',
-    mb: 1.5,
-  },
-  '@media (min-width: 1281px) and (max-width: 1440px)': {
-    ml: 25,
-    width: '40em',
-    mb: 1.5,
-  },
-  '@media (min-width: 2560px)': {
-    ml: 40,
-    mb: 2,
-  },
-  '@media (min-width: 3840px)': {
-    ml: 110,
-    mb: 5,
-    mt: 10,
-  },
 }
 
 const TypoAgendamento = {
   zIndex: 1,
-  mt: -40,
-  ml: 67,
+  mt: 2,
+  ml: 'auto',
+  mr: 'auto',
   fontSize: 35,
   fontWeight: 600,
   color: '#000000',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    fontSize: 20,
-    mt: -45,
-    ml: 10,
+  '@media (min-width: 320px) ': {
+    fontSize: 18,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    fontSize: 24,
-    mt: -175,
-    ml: 17.4,
-  },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    fontSize: 24,
-    mt: -172,
-    ml: 19,
-  },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    ml: 11.5,
-    mt: -45,
-    fontSize: 25,
-  },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    ml: 13,
-    mt: -45,
-    fontSize: 23,
-  },
-  '@media (min-width: 600px) and (max-width: 767px)': {
-    ml: 20,
-    mt: -43,
-    fontSize: 23,
-  },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
-    ml: 21.5,
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    ml: 34,
-  },
-  '@media (min-width: 1025px) and (max-width: 1280px)': {
-    ml: 44,
-  },
-  '@media (min-width: 1281px) and (max-width: 1440px)': {
-    ml: 50,
-  },
-  '@media (min-width: 2560px)': {
-    ml: 80,
-    fontSize: 50,
-  },
-  '@media (min-width: 3840px)': {
-    ml: 140,
-    mt: -32,
+  '@media (min-width: 1024px) ': {
+    fontSize: 30,
   },
 }
 
 const TypoName = {
-  ml: 20,
-  mt: -2,
+  ml: -40,
+  mt: -5,
   mb: 1.6,
-  fontSize: 20,
+  fontSize: 22,
   fontWeight: 600,
   color: '#000000',
-  '@media (min-width: 320px) and (max-width: 375px)': {
-    mt: -1.5,
-    ml: 9.8,
-    fontSize: 12,
+
+  '@media (min-width: 320px) ': {
+    ml: 3,
+    mt: -1.7,
+    fontSize: 13,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    mt: -1.5,
-    ml: 11,
+  '@media (min-width: 768px) ': {
+    ml: -45,
+    mt: -2.45,
+    fontSize: 13,
+  },
+  '@media (min-width: 1024px) ': {
+    ml: -45,
+    mt: -1.7,
     fontSize: 14,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    mt: -1.5,
-    ml: 12.5,
-    fontSize: 15,
+  '@media (min-width: 1280px) ': {
+    ml: -60,
+    mt: -1.7,
+    fontSize: 14,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    fontSize: 15,
-    ml: 14,
-    mt: -2,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
+  '@media (min-width: 1440px) ': {
+    ml: -45,
+    mt: -1.8,
     fontSize: 18,
-    ml: 14,
-    mt: -2.5,
+  },
+  '@media (min-width: 1920px) ': {
+    ml: -40,
+    mt: -2.1,
+    fontSize: 19,
   },
 
 
@@ -183,171 +163,144 @@ const TypoName = {
 
 const TypoAgendado = {
   zIndex: 1,
-  ml: 2,
-  mt: 4,
+  ml: -90,
+  mt: 2,
   fontWeight: 600,
   color: '#0053d9',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    mt: 4,
-    ml: 1,
+  '@media (min-width: 320px) ': {
+    ml: -21,
+    mt: 2.9,
     fontSize: 12,
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    mt: 4,
-    ml: 1,
+  '@media (min-width: 375px) ': {
+    ml: -25,
     fontSize: 12,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    mt: 4,
-    ml: 1,
+  '@media (min-width: 768px) ': {
+    ml: 10,
+    mt: 1.8,
     fontSize: 12,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    mt: 4,
-    fontSize: 15,
+  '@media (min-width: 1024px) ': {
+    ml: -75,
+    mt: 2.5,
+    fontSize: 12,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    fontSize: 15,
-    mt: 5,
+  '@media (min-width: 1280px) ': {
+    ml: -94.5,
+    mt: 2.5,
+    fontSize: 12,
   },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    fontSize: 15,
-    mt: 5,
+  '@media (min-width: 1440px) ': {
+    ml: -75,
+    fontSize: 12,
   },
-
+  '@media (min-width: 1920px) ': {
+    ml: -76,
+    mt: 3,
+    fontSize: 13,
+  },
 }
 
 const TypoHour = {
   zIndex: 1,
-  ml: 2,
-  mt: -6,
-  fontSize: 20,
+  ml: -90.5,
+  mt: -0.6,
+  fontSize: 16,
   fontWeight: 600,
-  '@media (min-width: 320px) and (max-width: 375px)': {
-    mt: -4.5,
-    ml: 1.2,
-    fontSize: 13,
+
+  '@media (min-width: 320px) ': {
+  ml: -21,
+  mt: -4,
+  fontSize: 12,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    mt: -4.7,
-    ml: 1,
-    fontSize: 15,
+  '@media (min-width: 375px) ': {
+    ml: -25.5,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
+  '@media (min-width: 768px) ': {
+    ml: -18,
+    mt: -2.2,
+  },
+  '@media (min-width: 1024px) ': {
+    ml: -75,
+    mt: -3.8,
+  },
+  '@media (min-width: 1280px) ': {
+    ml: -95,
+    mt: -3.8,
+  },
+  '@media (min-width: 1440px) ': {
+    ml: -75,
+    mt: -3.8,
+  },
+  '@media (min-width: 1920px) ': {
+    ml: -76,
+    mt: -4.3,
+    fontSize: 14,
+  },
+
+}
+
+const PopoverConfig = {
+  ml: 95,
+  mt: -5.5,
+
+  '@media (min-width: 320px) ': {
+  ml: 23,
+  mt: -5,
+  },
+  '@media (min-width: 375px) ': {
+    ml: 28,
+  },
+  '@media (min-width: 425px) ': {
+    ml: 32,
+    mt: -4.2,
+  },
+  '@media (min-width: 768px) ': {
+    ml: 54,
+    mt: -5,
+  },
+  '@media(min-width: 1024px) ': {
+    ml: 75,
+    mt: -5.1,
+  },
+  '@media(min-width: 1280px) ': {
+    ml: 90,
+  },
+  '@media (min-width: 1440px) ': {
+    ml: 75,
     mt: -5.5,
-    ml: 2.2,
-    fontSize: 15,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    fontSize: 15,
-    ml: 2,
-    mt: -5.4,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    fontSize: 15,
-    ml: 2.5,
-    mt: -5.4,
+  '@media (min-width: 1920px) ': {
+  ml: 80,
   },
 }
 
 const ButtonConfig = {
-  mt: 2,
-  ml: 70,
-
-  '@media (min-width: 320px) and (max-width: 359px)': {
-    ml: 7,
-  },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    ml: 15,
-  },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    ml: 18,
-  },
-  '@media (min-width: 390px) and (max-width: 410px)': {
-    ml: 10,
-  },
-  '@media (min-width: 411px) and (max-width: 424px)': {
-    ml: 10,
-  },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    ml: 11,
-  },
-  '@media (min-width: 600px) and (max-width: 767px)': {
-    ml: 18,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    ml: 23,
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    ml: 36,
-  },
-  '@media (min-width: 1025px) and (max-width: 1280px)': {
-    ml: 47,
-  },
-  '@media (min-width: 1281px) and (max-width: 1440px)': {
-    ml: 52,
-  },
-  '@media (min-width: 2560px)': {
-    ml: 83,
-  },
-  '@media (min-width: 3840px)': {
-    ml: 150,
-  },
+  mt: 5,
+  ml: 0,
 }
-
-const PopoverConfig = {
-  ml: -35,
-
-  
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    ml: -20,
-  },
-  '@media (min-width: 375px) and (max-width: 424px)': {
-    ml: -16,
-  },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    ml: -119,
-    mt: 0.5,
-  },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-    ml: -16,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    ml: -25,
-  },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    ml: -34,
-  },
-  '@media (min-width: 1025px) and (max-width: 1280px)': {
-    ml: -75,
-  },
-  '@media (min-width: 1281px) and (max-width: 1440px)': {
-    ml: -75,
-  },
-}
-
 
 export default function Agenda() {
   return (
-    <Box>
-      <Navbar />
-      <Breadcrumbs />
-      <Box sx={{ backgroundColor: '#fff' }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={2}  sx={{zIndex: 1000}}>
-            <Box><Sidebar /></Box>
-          </Grid>
-          <Box sx={GridConfig}>
-        <Box sx={{ backgroundColor: '#fff' }}>
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ zIndex: 1000 }}>
-            <Grid sx={GridConfig}>
+    <Box sx={{ backgroundColor: '#F6F4F4' }}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={20}>
+          <Item sx={NavbarConfig}><Navbar /></Item>
+          <Breadcrumbs />
+        </Grid>
+        <Grid item xs={1} sx={{ zIndex: 1000, }}>
+          <Item sx={SidebarConfig}><Sidebar /></Item>
+        </Grid>
+        <Grid item xs={11}>
+        <Item sx={ContentConfig}>
 
-              <Typography
-                sx={TypoAgendamento}
-              >Agendamento</Typography>
+          <Typography sx={TypoAgendamento}>
+            Agendamento
+          </Typography>
 
-              <Box
+          <Box
                 sx={BoxConfig}>
 
                 <Typography
@@ -364,17 +317,13 @@ export default function Agenda() {
 
                 <Box sx={PopoverConfig}><AgendamentoPopover /></Box>
 
-              </Box>
-
+          </Box>
               <Button sx={ButtonConfig}>
                 <AgendarHorario />
               </Button>
-
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-        </Grid></Box>
+          </Item>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

@@ -17,40 +17,79 @@ const style = {
   boxShadow: 2,
   p: 4,
 
-  '@media (min-width: 320px) and (max-width: 375px)': {
-    width: 150,
+  '@media (min-width: 320px)': {
+    width: 180,
     mt: 10,
-    ml: 5,
+    ml: 3.6,
   },
-  '@media (min-width: 375px) and (max-width: 383px)': {
+  '@media (min-width: 360px)': {
+    width: 210,
+    mt: 10,
+    ml: 3,
+  },
+  '@media (min-width: 375px)': {
     width: 220,
-    mt: 10,
-    ml: 5,
+    mt: 0,
+    ml: 3,
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    width: 200,
-    mt: -60,
-    ml: -22,
-  },
-  '@media (min-width: 390px) and (max-width: 424px)': {
-    width: 200,
-    mt: 1,
-    ml: 5,
-
-  },
-  '@media (min-width: 425px) and (max-width: 764px)': {
+  '@media (min-width: 384px)': {
     width: 220,
-    mt: 10,
+    mt: 0,
+    ml: 3,
+  },
+  '@media (min-width: 410px)': {
+    width: 250,
+    mt: -5,
+    ml: 3,
+  },
+  '@media (min-width: 425px)': {
+    width: 260,
+    mt: 0,
+    ml: 2,
+  },
+  '@media (min-width: 768px)': {
+    width: 525,
+    mt: 0,
+    ml: 2,
+  },
+  '@media (min-width: 800px)': {
+    mt: -30,
+  },
+  '@media (min-width: 810px)': {
+    ml: 0 ,
+    mt: -15,
+  },
+  '@media (min-width: 1024px) ': {
     ml: 5,
-
+    mt: -20,
+    width: '40%',
   },
-  '@media (min-width: 768px) and (max-width: 799px)': {
-    ml: -8,
+  '@media (min-width: 1280px) ': {
+    ml: 5,
+    mt: 10,
+    width: '40%',
   },
-  '@media (min-width: 800px) and (max-width: 1023px)': {
-    ml: -8,
-    mt: -40,
+  '@media (min-width: 1440px) ': {
+    ml: 5,
+    mt: -10,
+    width: '40%',
   },
+  '@media (min-width: 1920px) ': {
+    mt: -10,
+    ml: -6,
+    width: '40%',
+  },
+  '@media (min-width: 2560px) ': {
+    mt: -30,
+    ml: -10,
+    width: '30%',
+  },
+  '@media (min-width: 3840px) ': {
+    mt: -70,
+    ml: -30,
+    width: '25%',
+  },
+  
 
   
 };
@@ -59,16 +98,36 @@ const ButtonConfig = {
   mt: 5,
   ml: 23,
 
-  '@media (min-width: 320px) and (max-width: 767px)': {
+  '@media (min-width: 320px)': {
+    ml: -5,
+  },
+  '@media (min-width: 360px)': {
     ml: -5,
   },
   '@media (min-width: 390px)': {
-    ml: 1,
+    ml: -5.5,
+  },
+  '@media (min-width: 411px)': {
+    ml: -4,
   },
   '@media (min-width: 425px)': {
     ml: 22.5,
   },
-  
+  '@media (min-width: 1280px)': {
+    ml: 35,
+  },
+  '@media (min-width: 1440px)': {
+    ml: 43,
+  },
+  '@media (min-width: 1920px)': {
+    ml: 23,
+  },
+  '@media (min-width: 2560px)': {
+    ml: 23,
+  },
+  '@media (min-width: 3840px) ': {
+    ml: 45,
+  },
 
 }
 
@@ -82,23 +141,28 @@ const AdicionarConfig = {
     backgroundColor: '#05e340'
   },
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    ml: 8,
+  '@media (min-width: 320px)': {
+    ml: 9.5,
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    ml: 5.2,
+  '@media (min-width: 360px)': {
+    ml: 5,
   },
-  '@media (min-width: 390px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
+    ml: 6,
+  },
+  '@media (min-width: 425px)': {
+    ml: -19,
+  },
+  '@media (min-width: 768px)': {
+    ml: 16,
+  },
+  '@media (min-width: 1024px)': {
+    ml: 2.8,
+  },
+  '@media (min-width: 1920px)': {
+    ml: 47,
+  },
 
-    ml: -2,
-  },
-  '@media (min-width: 425px) and (max-width: 767px)': {
-
-    ml: -22,
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
-    ml: -10,
-  },
 
 
 }
@@ -113,14 +177,18 @@ const CancelarConfig = {
     backgroundColor: '#db0b00'
   },
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
-    ml: 8,
+  '@media (min-width: 320px)': {
+    ml: 9.5,
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
+  '@media (min-width: 360px)': {
     ml: 18,
+    mt: -7.4,
+  },
+  '@media (min-width: 375px)': {
+    ml: 20,
     mt: -7.3,
   },
-  '@media (min-width: 425px) and (max-width: 768px)': {
+  '@media (min-width: 425px)': {
     mt: -0.1,
     ml: 1,
   },
@@ -153,9 +221,9 @@ export default function BasicModal() {
         <Box sx={style}>
           <Typography sx={{
             fontWeight: 600,
-            fontSize: 22,
+            fontSize: 20,
             textAlign: 'center',
-            ml: 2.3
+            ml: 0
           }}>
           Adicionar Atendimento
           </Typography>

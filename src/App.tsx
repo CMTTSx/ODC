@@ -14,14 +14,12 @@ import Clientes from './Pages/Clientes';
 import Financeiro from './Pages/Financeiro';
 import Gerenciamento from './Pages/Gerenciamento';
 import Suporte from './Pages/Suporte';
-import Test from './Pages/Test';
 
 export default function App() {
   return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SignIn />} />
-          <Route path="/test" element={<Test />} />
           <Route path="/paginaInicial" element={<Home />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/clientes" element={<Clientes />} />

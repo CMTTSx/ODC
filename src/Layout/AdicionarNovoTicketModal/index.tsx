@@ -19,57 +19,47 @@ const style = {
   boxShadow: 2,
   p: 4,
 
-  '@media (min-width: 320px) and (max-width: 359px)': {
-    width: '16%',
-    ml: -37.6,
-    mt: -100,
+  '@media (min-width: 320px)': {
+    width: '54%',
+    ml: 3.5,
+    mt: 0,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
-    width: '13em',
-    ml: -38,
-    mt: -79,
+  '@media (min-width: 360px)': {
   },
-  '@media (min-width: 375px) and (max-width: 383px)': {
-    width: '20%',
-    ml: -37.7,
-    mt: -65,
+  '@media (min-width: 375px)': {
   },
-  '@media (min-width: 384px) and (max-width: 389px)': {
-    width: '21%',
-    ml: -37.6,
-    mt: -90,
+  '@media (min-width: 384px)': {
   },
-  '@media (min-width: 390px) and (max-width: 410px)': {
-    width: '20%',
-    ml: -38,
-    mt: -53,
+  '@media (min-width: 390px)': {
   },
-  '@media (min-width: 411px) and (max-width: 424px)': {
-    ml: -38,
-    mt: -80,
-    width: 240,
+  '@media (min-width: 411px)': {
   },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    width: '24%',
-    ml: -38,
-    mt: -50,
+  '@media (min-width: 425px)': {
   },
-  '@media (min-width: 600px) and (max-width: 767px)': {
-    width: '32%',
-    ml: -34,
-    mt: -65,
+  '@media (min-width: 600px)': {
+    top: '40%',
+    left: '47%',
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
-    ml: -17,
-    mt: -18,
-    width: 600,
+  '@media (min-width: 768px)': {
   },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
+  '@media (min-width: 800px)': {
+    top: '40%',
+    left: '45%',
+  },
+  '@media (min-width: 1024px)': {
     top: '40%',
     left: '51%',
   },
+  '@media (min-width: 1280px)': {
+    top: '50%',
+    left: '51%',
+  },
+  '@media (min-width: 1440px)': {
+    top: '48%',
+    left: '50%',
+  },
   '@media (min-width: 2560px)': {
-    ml: -40,
+    ml: 0,
     mt: -30,
   },
 
@@ -79,29 +69,38 @@ const ButtonConfig = {
   mt: 5,
   ml: 62,
 
-  '@media (min-width: 320px) and (max-width: 359px)': {
-    ml: -2.2,
+  '@media (min-width: 320px)': {
+    ml: -0.5,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
+  '@media (min-width: 360px)': {
+    ml: 1.3,
+  },
+  '@media (min-width: 411px)': {
+    ml: 2,
+  },
+  '@media (min-width: 425px)': {
     ml: 3,
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
-    ml: 4,
+  '@media (min-width: 600px)': {
+    ml: 8.5,
   },
-  '@media (min-width: 390px) and (max-width: 410px)': {
-    ml: 4,
+  '@media (min-width: 768px)': {
+    ml: 16,
   },
-  '@media (min-width: 411px) and (max-width: 424px)': {
-    ml: 7,
+  '@media (min-width: 1024px)': {
+    ml: 45,
   },
-  '@media (min-width: 425px) and (max-width: 599px)': {
-    ml: 10,
+  '@media (min-width: 1280px)': {
+    ml: 61,
   },
-  '@media (min-width: 600px) and (max-width: 767px)': {
-    ml: 30,
+  '@media (min-width: 1440px)': {
+    ml: 72,
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
-    ml: 51,
+  '@media (min-width: 1920px)': {
+    ml: 103,
+  },
+  '@media (min-width: 3840px)': {
+    ml: 228,
   },
 
 }

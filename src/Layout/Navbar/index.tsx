@@ -12,16 +12,15 @@ import Logotipo from '../../assets/ODCSYSTEM.png';
 //===============BREAKPOINTS===================//
 
 const BoxConfig = {
-  overflow: 'hidden',
   display: 'flex',
   bgcolor: '#000744',
   mt: -1,
   ml: -1,
-  pr: 2,
-  width: 1,
+  width: '100%',
+  
   '@media (max-width: 599px) ': {
     overflow: 'hidden',
-    height: '2.5rem',
+    height: '2.8rem',
   },
   '@media (min-width: 600px) and (max-width: 904px)': {
     overflow: 'hidden',
@@ -47,12 +46,16 @@ const Logo = {
   width: '16rem',
   height: '5rem',
   color: "#f5f5f5",
-  backgroundSize: "cover",
   backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
 
   '@media (max-width: 599px) ': {
     width: '8rem',
+    height: '4rem',
     backgroundSize: "contain",
+    backgroundPosition: "center",
+    mt: -0.4,
+
   },
   '@media (min-width: 600px) ': {
     width: '13rem',
@@ -80,7 +83,7 @@ const Logo = {
 
 const TypographyTopBar = {
   ml: 175,
-  mt: 2,
+  mt: 2.8,
 
   '@media (min-width: 280px) and (max-width: 319px)': {
     mt: 1.8,
@@ -137,7 +140,8 @@ const TypographyConfig = {
   color: '#fff',
 
   '@media (max-width: 599px) ': {
-    mt: -0.5,
+    mt: -0.1,
+    ml: -0.5,
     fontSize: '0.65rem',
   },
   '@media (min-width: 600px) ': {
@@ -173,8 +177,6 @@ export default function Navbar() {
     <Box
       sx={BoxConfig}
     >
-
-
       <Link to='/paginaInicial'>
         <Box sx={Logo}></Box>
       </Link>

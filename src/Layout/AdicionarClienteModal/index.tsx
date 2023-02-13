@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -21,7 +22,7 @@ const style = {
   boxShadow: 2,
   p: 4,
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
@@ -31,87 +32,113 @@ const style = {
     mt: 8,
     ml: 5,
   },
-  '@media (min-width: 360px) and (max-width: 374px)': {
+  '@media (min-width: 360px)': {
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
-    overflowY: 'auto',
     width: 207,
     height: 500,
     mt: 8,
     ml: 5,
   },
-  '@media (min-width: 375px) and (max-width: 389px)': {
+  '@media (min-width: 375px)': {
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
-    overflowY: 'auto',
     width: 225,
     height: 500,
     mt: 8,
     ml: 5,
   },
-  '@media (min-width: 390px) and (max-width: 410px)': {
+  '@media (min-width: 390px)': {
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
-    overflowY: 'auto',
     width: 230,
-    mt: 20,
-    ml: 0,
+    height: 500,
+    mt: 7,
+    ml: 5,
   },
-  '@media (min-width: 411px) and (max-width: 424px)': {
+  '@media (min-width: 411px)': {
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
-    overflowY: 'auto',
     width: 260,
     height: 500,
     mt: 0,
     ml: 5,
   },
-  '@media (min-width: 425px) and (max-width: 599px)': {
+  '@media (min-width: 425px)': {
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
-    overflowY: 'auto',
     width: 270,
     height: 500,
     mt: 8,
     ml: 5,
   },
-  '@media (min-width: 600px) and (max-width: 767px)': {
+  '@media (min-width: 600px)': {
     width: 250,
     mt: 13,
     ml: 0,
   },
-  '@media (min-width: 768px) and (max-width: 809px)': {
+  '@media (min-width: 768px)': {
     ml: 0,
     mt: 5.8,
     width: 500,
     height: 600,
   },
-  '@media (min-width: 800px) and (max-width: 1022px)': {
+  '@media (min-width: 800px)': {
     ml: 0,
     mt: -7,
     width: 500,
   },
-  '@media (min-width: 1023px) and (max-width: 1024px)': {
-    ml: 5,
+  '@media (min-width: 1024px)': {
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 750,
+    height: 630,
+    bgcolor: 'background.paper',
+    border: '2px solid #028be6',
+    borderRadius: 1,
+    boxShadow: 2,
+    p: 4,
     mt: -20,
+    ml: 5,
   },
-  '@media (min-width: 1280px) and (max-width: 1438px)': {
-    ml: 0,
+  '@media (min-width: 1280px)': {
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 750,
+    height: 510,
+    bgcolor: 'background.paper',
+    border: '2px solid #028be6',
+    borderRadius: 1,
+    boxShadow: 2,
+    p: 4,
+    mt: 5,
+    ml: 5,
+  },
+  '@media (min-width: 1440px)': {
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 750,
+    height: 580,
+    bgcolor: 'background.paper',
+    border: '2px solid #028be6',
+    borderRadius: 1,
+    boxShadow: 2,
+    p: 4,
     mt: 5,
   },
-  '@media (min-width: 1439px) and (max-width: 1440px)': {
-    ml: 0,
-    mt: -5,
-  },
   '@media (min-width: 2560px)': {
-    ml: -12,
-    mt: -5,
+    mt: -13,
   },
+  '@media (min-width: 3840px)': {
+    mt: -55,
+  },
+  
 
 };
 
@@ -119,23 +146,27 @@ const TypoCadastroCliente = {
   fontWeight: 600,
   fontSize: 22,
   textAlign: 'center',
+  mt: 2,
 } 
 
 const cpfConfig = {
   mt: 2,
   width: '45%',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     width: '100%',
     mt: 1,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     width: '100%'
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     width: '100%'
   },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
+  '@media (min-width: 768px)': {
+    width: '100%'
+  },
+  '@media (min-width: 1024px)': {
     width: '100%'
   },
 }
@@ -145,20 +176,20 @@ const dataConfig = {
   ml: 1,
   width: '33%',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     width: '100%',
     mt: 1,
     ml: 0,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     width: '100%',
     ml: 0,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     width: '100%',
     ml: 0,
   },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
+  '@media (min-width: 768px)': {
     width: '100%',
     ml: 0,
   },
@@ -170,22 +201,22 @@ const sexoConfig = {
   mt: -7,
 
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
+  '@media (min-width: 768px)': {
     ml: 0,
     mt: 1,
     width: '50%',
@@ -197,52 +228,69 @@ const estadoCivilConfig = {
   width: 234,
   mt: -7,
   mb: 5,
-  ml: 31,
+  ml: 34,
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
+  '@media (min-width: 768px)': {
     width: '45%',
     mt: -15,
     ml: 34.5,
+  },
+  '@media (min-width: 1024px)': {
+    width: '50%',
+    mt: 1,
+    mb: 5,
+    ml: 0,
   },
 }
 
 const telefoneConfig = {
   mt: 1,
 
-  '@media (min-width: 768px) and (max-width: 1022px)': {
+  '@media (min-width: 768px)': {
     width: '50%',
+  },
+  '@media (min-width: 1024px)': {
+    width: '48.8%',
+    mt: -7,
+    ml: 48,
   },
 }
 
 const EnderecoConfig = {
-  mt: 4,
+  mt: 1,
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     mt: -2,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     mt: -2,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     mt: -2,
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
+  '@media (min-width: 768px)': {
     mt: 10,
+  },
+  '@media (min-width: 1024px)': {
+    mt: -2.5,
+  },
+  '@media (min-width: 1440px)': {
+    mt: -2,
   },
 
 }
@@ -250,13 +298,13 @@ const EnderecoConfig = {
 const logradouroConfig = {
   width: '40%',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     width: '100%',
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     width: '100%',
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     width: '100%',
   },
 }
@@ -265,17 +313,17 @@ const numeroConfig = {
   ml: 0.5,
   width: '20%',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     width: '100%',
     ml: 0,
     mt: 1,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     width: '100%',
     ml: 0,
     mt: 1,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     width: '100%',
     ml: 0,
     mt: 1,
@@ -287,17 +335,17 @@ const complementoConfig = {
   ml: 0.5,
   width: '38%',
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     width: '100%',
     ml: 0,
     mt: 1,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     width: '100%',
     ml: 0,
     mt: 1,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     width: '100%',
     ml: 0,
     mt: 1,
@@ -308,13 +356,13 @@ const estadoConfig = {
   width: 234,
   mt: 2,
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     width: '100%',
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     width: '100%',
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     width: '100%',
   },
   
@@ -325,17 +373,17 @@ const cidadeConfig = {
   mt: -6.9,
   ml: 30,
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
+  '@media (min-width: 375px)': {
     ml: 0,
     mt: 1,
     width: '100%',
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 425px)': {
     ml: 0,
     mt: 1,
     width: '100%',
@@ -353,21 +401,41 @@ const AddButtonConfig = {
     backgroundColor: '#05e340'
   },
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     ml: -64,
     mt: -12,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
-    ml: -66.5,
-    mt: -11,
+  '@media (min-width: 360px)': {
+    ml: -67.5,
+    mt: -12,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 375px)': {
+    ml: -67.5,
+    mt: -12,
+  },
+  '@media (min-width: 410px)': {
+    ml: -65,
+    mt: -12,
+  },
+  '@media (min-width: 425px)': {
     ml: -65,
     mt: -10,
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
-    ml: -52,
+  '@media (min-width: 768px)': {
+    ml: -31,
     mt: -8,
+  },
+  '@media (min-width: 1024px)': {
+    ml: 0,
+    mt: -15,
+  },
+  '@media (min-width: 1280px)': {
+    ml: 0,
+    mt: -15,
+  },
+  '@media (min-width: 1440px)': {
+    ml: 0,
+    mt: -15,
   },
 
 }
@@ -383,19 +451,32 @@ const CancelButtonConfig = {
     backgroundColor: '#db0b00'
   },
 
-  '@media (min-width: 320px) and (max-width: 374px)': {
+  '@media (min-width: 320px)': {
     mt: -2,
     ml: -12.2,
   },
-  '@media (min-width: 375px) and (max-width: 424px)': {
-    mt: -11,
+  '@media (min-width: 360px)': {
+    ml: 1,
+    mt: -12,
   },
-  '@media (min-width: 425px) and (max-width: 767px)': {
+  '@media (min-width: 375px)': {
+    mt: -12,
+    ml: 1
+  },
+  '@media (min-width: 425px)': {
     mt: -10,
   },
-  '@media (min-width: 768px) and (max-width: 1022px)': {
+  '@media (min-width: 768px)': {
     ml: 1,
     mt: -8,
+  },
+  '@media (min-width: 1024px)': {
+    ml: 1,
+    mt: -15,
+  },
+  '@media (min-width: 1440px)': {
+    ml: 1,
+    mt: -15,
   },
 }
 
