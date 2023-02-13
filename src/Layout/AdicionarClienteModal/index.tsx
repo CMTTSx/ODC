@@ -494,6 +494,7 @@ export default function BasicModal() {
     setAge(event.target.value as string);
   };
 
+  const [nomeCompleto, setNomeCompleto] = React.useState('');
   
 
   return (
@@ -531,6 +532,7 @@ export default function BasicModal() {
             id="outlined-required"
             label="Nome Completo"
             fullWidth={true}
+            onChange={e => setNomeCompleto(e.target.value)}
             sx={{
               mt: 1,
             }}

@@ -157,6 +157,11 @@ const TypographyConfig = {
     mt: -0.1,
     fontSize: '1rem',
   },
+  '@media (min-width: 1920px)': {
+    mt: -0.1,
+    ml: 60,
+    fontSize: '1rem',
+  },
   '@media (min-width: 2560px)': {
     mt: -0.1,
     fontSize: '1.5rem',
