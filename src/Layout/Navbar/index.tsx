@@ -164,11 +164,12 @@ const TypographyConfig = {
   },
   '@media (min-width: 2560px)': {
     mt: -0.1,
+    ml: 5,
     fontSize: '1.5rem',
   },
   '@media (min-width: 3840px)': {
     mt: 1,
-    ml: 190,
+    ml: 260,
     fontSize: '1.5rem',
   },
 
