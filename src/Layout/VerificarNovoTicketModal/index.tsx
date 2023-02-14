@@ -89,33 +89,6 @@ const SairConfig = {
 
 }
 
-const VerMaisConfig = {
-  ml: 74,
-  mt: -4,
-  width: '13%',
-  p: 1,
-  cursor: 'pointer',
-  color: '#fff',
-  fontWeight: 600,
-
-  '@media (min-width: 320px)': {
-    ml: 15,
-    visibility: 'hidden',
-  },
-  '@media (min-width: 375px)': {
-    ml: 22,
-  },
-  '@media (min-width: 390px)': {
-    ml: 24,
-  },
-  '@media (min-width: 425px)': {
-    ml: 28,
-  },
-  '@media (min-width: 768px)': {
-    ml: 43,
-  },
-}
-
 export default function VerificarNovoTicketModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -168,8 +141,6 @@ export default function VerificarNovoTicketModal() {
               color: '#fff',
               fontWeight: 600,
             }}> Ticket: #1265362</Typography>
-
-            <Typography sx={VerMaisConfig}>Ver Mais...</Typography>
 
           </Box>
 
