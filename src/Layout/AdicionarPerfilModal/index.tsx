@@ -649,7 +649,7 @@ export default function BasicModal() {
 
           <Box>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Perfil</InputLabel>
+              <InputLabel id="demo-simple-select-label">Perfil de Usuário</InputLabel>
               
               <Select
                 value={perfil}
