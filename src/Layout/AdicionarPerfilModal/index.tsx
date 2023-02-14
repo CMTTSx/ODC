@@ -273,6 +273,7 @@ const telefoneConfig = {
 
 const EnderecoConfig = {
   mt: 1,
+  mb: 1,
 
   '@media (min-width: 320px)': {
     mt: -2,
@@ -480,17 +481,25 @@ const CancelButtonConfig = {
   },
 }
 
+
 export default function BasicModal() {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const [nomeCompleto, setNomeCompleto] = React.useState('');
+  const [cpf, setCpf] = React.useState('');
   const [age, setAge] = React.useState('');
+  const [sexo, setSexo] = React.useState('');
+  const [estadoCivil, setEstadoCivil] = React.useState('');
+
+
   const [cidade, setCidade] = React.useState('');
   const [estado, setEstado] = React.useState('');
 
   const [perfil, setPerfil] = React.useState('');
+  
   const [administrador, setAdministrador] = React.useState('');
   const [recepcionista, setRecepcionista] = React.useState('');
   const [odontologo, setOdontologo] = React.useState('');
@@ -529,11 +538,14 @@ export default function BasicModal() {
             Adicionar Perfil
           </Typography>
 
+          <Typography sx={{mt: 2, mb: 1}}>Dados Pessoais</Typography>
+
+
           <TextField
             required
-            id="outlined-required"
             label="Nome Completo"
             fullWidth={true}
+            value={setNomeCompleto}
             sx={{
               mt: 1,
             }}
@@ -541,23 +553,22 @@ export default function BasicModal() {
 
           <TextField
             required
-            id="outlined-required"
             label="CPF"
             sx={cpfConfig}
+            value={setCpf}
           />
 
           <TextField
             required
-            id="outlined-required"
             sx={dataConfig}
             type="date"
+            value={setAge}
           />
 
           <Box sx={sexoConfig}>
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Sexo</InputLabel>
               <Select
-                value={age}
                 label="Sexo"
                 onChange={handleChange}
               >
@@ -569,7 +580,6 @@ export default function BasicModal() {
 
           <TextField
             required
-            id="outlined-required"
             label="Telefone"
             sx={telefoneConfig}
           />
@@ -578,8 +588,7 @@ export default function BasicModal() {
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Estado Civil</InputLabel>
               <Select
-                value={age}
-                label="Sexo"
+                label="Estado Civil"
                 onChange={handleChange}
               >
                 <MenuItem value={'S'}>Solteiro</MenuItem>
@@ -596,21 +605,18 @@ export default function BasicModal() {
 
           <TextField
             required
-            id="outlined-required"
             label="Logradouro"
             sx={logradouroConfig}
           />
 
           <TextField
             required
-            id="outlined-required"
             label="Número"
             sx={numeroConfig}
           />
 
           <TextField
             required
-            id="outlined-required"
             label="Complemento"
             sx={complementoConfig}
           />
@@ -647,24 +653,19 @@ export default function BasicModal() {
 
           <Typography sx={{mt: 2,}}>Perfil</Typography>
 
-          <Box>
-            <FormControl fullWidth>
+          <Box sx={{mt: 2, mb: 2}}>
+            <FormControl fullWidth={true}>
               <InputLabel id="demo-simple-select-label">Perfil de Usuário</InputLabel>
-              
               <Select
-                value={perfil}
                 label="Perfil"
                 onChange={handleChange}
               >
-                <MenuItem value={'administrador'}>Administrador</MenuItem>
-                <MenuItem value={'recepcionista'}>Recepcionista</MenuItem>
-                <MenuItem value={'odontologo'}>Odontólogo</MenuItem>
+                <MenuItem value={'adm'}>Administrador</MenuItem>
+                <MenuItem value={'rcp'}>Recepcionista</MenuItem>
+                <MenuItem value={'odo'}>Odontológo</MenuItem>
               </Select>
-              
             </FormControl>
           </Box>
-
-
 
           <Box sx={{
             mt: 10,

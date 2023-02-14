@@ -138,7 +138,7 @@ const style = {
   '@media (min-width: 3840px)': {
     mt: -55,
   },
-  
+
 
 };
 
@@ -147,7 +147,7 @@ const TypoCadastroCliente = {
   fontSize: 22,
   textAlign: 'center',
   mt: 2,
-} 
+}
 
 const cpfConfig = {
   mt: 2,
@@ -273,6 +273,7 @@ const telefoneConfig = {
 
 const EnderecoConfig = {
   mt: 1,
+  mb: 1,
 
   '@media (min-width: 320px)': {
     mt: -2,
@@ -328,7 +329,7 @@ const numeroConfig = {
     ml: 0,
     mt: 1,
   },
-  
+
 }
 
 const complementoConfig = {
@@ -365,7 +366,7 @@ const estadoConfig = {
   '@media (min-width: 425px)': {
     width: '100%',
   },
-  
+
 }
 
 const cidadeConfig = {
@@ -480,19 +481,36 @@ const CancelButtonConfig = {
   },
 }
 
+
 export default function BasicModal() {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const [nomeCompleto, setNomeCompleto] = React.useState('');
+  const [cpf, setCpf] = React.useState('');
   const [age, setAge] = React.useState('');
+  const [sexo, setSexo] = React.useState('');
+  const [estadoCivil, setEstadoCivil] = React.useState('');
+
+
   const [cidade, setCidade] = React.useState('');
   const [estado, setEstado] = React.useState('');
 
+  const [perfil, setPerfil] = React.useState('');
+  
+  const [administrador, setAdministrador] = React.useState('');
+  const [recepcionista, setRecepcionista] = React.useState('');
+  const [odontologo, setOdontologo] = React.useState('');
+
+
+
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
-  };  
+  };
+
+
 
   return (
     <div>
@@ -507,7 +525,7 @@ export default function BasicModal() {
           backgroundColor: '#089bfc',
         }
 
-      }}>Adicionar Cliente</Button>
+      }}>Adicionar Perfil</Button>
       <Modal
         hideBackdrop={true}
         open={open}
@@ -517,18 +535,17 @@ export default function BasicModal() {
       >
         <Box sx={style}>
           <Typography sx={TypoCadastroCliente}>
-            Cadastro de Cliente
+            Adicionar Perfil
           </Typography>
 
-
-
+          <Typography sx={{mt: 2, mb: 1}}>Dados Pessoais</Typography>
 
 
           <TextField
             required
-            id="outlined-required"
             label="Nome Completo"
             fullWidth={true}
+            value={setNomeCompleto}
             sx={{
               mt: 1,
             }}
@@ -536,23 +553,22 @@ export default function BasicModal() {
 
           <TextField
             required
-            id="outlined-required"
             label="CPF"
             sx={cpfConfig}
+            value={setCpf}
           />
 
           <TextField
             required
-            id="outlined-required"
             sx={dataConfig}
             type="date"
+            value={setAge}
           />
 
           <Box sx={sexoConfig}>
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Sexo</InputLabel>
               <Select
-                value={age}
                 label="Sexo"
                 onChange={handleChange}
               >
@@ -564,7 +580,6 @@ export default function BasicModal() {
 
           <TextField
             required
-            id="outlined-required"
             label="Telefone"
             sx={telefoneConfig}
           />
@@ -573,8 +588,7 @@ export default function BasicModal() {
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Estado Civil</InputLabel>
               <Select
-                value={age}
-                label="Sexo"
+                label="Estado Civil"
                 onChange={handleChange}
               >
                 <MenuItem value={'S'}>Solteiro</MenuItem>
@@ -591,21 +605,18 @@ export default function BasicModal() {
 
           <TextField
             required
-            id="outlined-required"
             label="Logradouro"
             sx={logradouroConfig}
           />
 
           <TextField
             required
-            id="outlined-required"
             label="Número"
             sx={numeroConfig}
           />
 
           <TextField
             required
-            id="outlined-required"
             label="Complemento"
             sx={complementoConfig}
           />
@@ -638,7 +649,6 @@ export default function BasicModal() {
               </Select>
             </FormControl>
           </Box>
-
 
           <Box sx={{
             mt: 10,

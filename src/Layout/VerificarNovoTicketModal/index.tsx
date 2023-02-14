@@ -15,6 +15,7 @@ const style = {
   borderRadius: 1,
   boxShadow: 2,
   p: 4,
+  cursor: 'pointer',
 
   '@media (min-width: 320px)': {
     ml: 3,
