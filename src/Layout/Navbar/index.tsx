@@ -139,13 +139,13 @@ const TypographyTopBar = {
 const TypographyConfig = {
   color: '#fff',
 
-  '@media (max-width: 599px) ': {
+  '@media (min-width: 320px) ': {
     mt: -0.1,
     ml: -0.5,
     fontSize: '0.65rem',
   },
   '@media (min-width: 600px) ': {
-    mt: -0.2,
+    mt: 0.2,
     ml: -10,
     fontSize: '0.9rem',
   },
@@ -153,8 +153,14 @@ const TypographyConfig = {
     mt: -0.5,
     fontSize: '1rem',
   },
+  '@media (min-width: 991px)': {
+    mt: 0.3,
+    ml: 15,
+    fontSize: '1rem',
+  },
   '@media (min-width: 1440px)': {
     mt: -0.1,
+    ml: -5,
     fontSize: '1rem',
   },
   '@media (min-width: 1920px)': {
@@ -169,7 +175,7 @@ const TypographyConfig = {
   },
   '@media (min-width: 3840px)': {
     mt: 1,
-    ml: 260,
+    ml: '90em',
     fontSize: '1.5rem',
   },
 
