@@ -8,7 +8,7 @@ import { Button, TextField, Typography } from '@mui/material';
 import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Clientes';
 import Sidebar from '../Layout/Sidebar';
-import AdicionarCliente from '../Layout/AdicionarClienteModal';
+import AdicionarCliente from '../Layout/AdicionarPerfilModal';
 import { BsSearch } from 'react-icons/bs';
 
 
@@ -109,27 +109,9 @@ const InputConfig = {
 }
 
 const ButtonAddConfig = {
-  ml: 73,
+  ml: 0,
   mt: 2,
 
-  '@media (min-width: 320px) ': {
-    ml: '44%',
-  },
-  '@media (min-width: 375px) ': {
-    ml: '53%',
-  },
-  '@media (min-width: 425px) ': {
-    ml: '59%',
-  },
-  '@media (min-width: 768px) ': {
-    ml: '77%',
-  },
-  '@media (min-width: 1280px) ': {
-    ml: '86.5%',
-  },
-  '@media (min-width: 1920px) ': {
-    ml: '39%',
-  },
 
 }
 

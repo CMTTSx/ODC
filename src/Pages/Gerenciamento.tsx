@@ -9,7 +9,7 @@ import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Gerenciamento';
 import Sidebar from '../Layout/Sidebar';
 import GerenciamentoPopover from '../Layout/GerenciamentoPopover';
-
+import AdicionarPerfilModal from '../Layout/AdicionarPerfilModal';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -192,9 +192,6 @@ const PopoverConfig = {
 
 }
 
-const ButtonConfig = {
-  mt: 1,
-}
 
 
 
@@ -223,8 +220,7 @@ export default function Gerenciamento() {
 
             </Box>
 
-            <Button sx={ButtonConfig} variant='contained' >Adicionar Perfil</Button>
-
+            <Button><AdicionarPerfilModal /></Button>
 
           </Item>
         </Grid>
