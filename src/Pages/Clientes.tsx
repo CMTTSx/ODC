@@ -8,7 +8,7 @@ import { Button, TextField, Typography } from '@mui/material';
 import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Clientes';
 import Sidebar from '../Layout/Sidebar';
-import AdicionarCliente from '../Layout/AdicionarPerfilModal';
+import AdicionarCliente from '../Layout/AdicionarClienteModal';
 import { BsSearch } from 'react-icons/bs';
 
 

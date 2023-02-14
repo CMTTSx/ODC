@@ -498,7 +498,6 @@ export default function BasicModal() {
   const [cidade, setCidade] = React.useState('');
   const [estado, setEstado] = React.useState('');
 
-  const [perfil, setPerfil] = React.useState('');
   
   const [administrador, setAdministrador] = React.useState('');
   const [recepcionista, setRecepcionista] = React.useState('');
@@ -525,7 +524,7 @@ export default function BasicModal() {
           backgroundColor: '#089bfc',
         }
 
-      }}>Adicionar Perfil</Button>
+      }}>Adicionar Cliente</Button>
       <Modal
         hideBackdrop={true}
         open={open}
@@ -535,7 +534,7 @@ export default function BasicModal() {
       >
         <Box sx={style}>
           <Typography sx={TypoCadastroCliente}>
-            Adicionar Perfil
+            Adicionar Cliente
           </Typography>
 
           <Typography sx={{mt: 2, mb: 1}}>Dados Pessoais</Typography>
