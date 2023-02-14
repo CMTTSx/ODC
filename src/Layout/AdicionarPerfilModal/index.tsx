@@ -656,9 +656,9 @@ export default function BasicModal() {
                 label="Perfil"
                 onChange={handleChange}
               >
-                <MenuItem value={'A'}>Administrador</MenuItem>
-                <MenuItem value={'B'}>Recepcionista</MenuItem>
-                <MenuItem value={'C'}>Odontólogo</MenuItem>
+                <MenuItem value={'administrador'}>Administrador</MenuItem>
+                <MenuItem value={'recepcionista'}>Recepcionista</MenuItem>
+                <MenuItem value={'odontologo'}>Odontólogo</MenuItem>
               </Select>
               
             </FormControl>
