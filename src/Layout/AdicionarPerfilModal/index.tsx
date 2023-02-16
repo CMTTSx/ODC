@@ -662,7 +662,7 @@ export default function BasicModal() {
               >
                 <MenuItem value={'adm'}>Administrador</MenuItem>
                 <MenuItem value={'rcp'}>Recepcionista</MenuItem>
-                <MenuItem value={'odo'}>Odontológo</MenuItem>
+                <MenuItem value={'odo'}>Odontólogo</MenuItem>
               </Select>
             </FormControl>
           </Box>
