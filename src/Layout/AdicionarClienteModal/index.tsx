@@ -427,11 +427,10 @@ const AddButtonConfig = {
     mt: -8,
   },
   '@media (min-width: 1024px)': {
-    ml: 0,
+    ml: -2,
     mt: -15,
   },
   '@media (min-width: 1280px)': {
-    ml: -2,
     mt: -15,
   },
   '@media (min-width: 1440px)': {
