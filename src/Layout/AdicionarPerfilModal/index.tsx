@@ -403,39 +403,23 @@ const AddButtonConfig = {
   },
 
   '@media (min-width: 320px)': {
-    ml: -64,
-    mt: -12,
-  },
-  '@media (min-width: 360px)': {
-    ml: -67.5,
-    mt: -12,
+    ml: -70,
   },
   '@media (min-width: 375px)': {
-    ml: -67.5,
-    mt: -12,
+    ml: -67,
   },
   '@media (min-width: 410px)': {
-    ml: -65,
-    mt: -12,
+    ml: -66.5,
   },
   '@media (min-width: 425px)': {
     ml: -65,
-    mt: -10,
   },
   '@media (min-width: 768px)': {
-    ml: -31,
-    mt: -8,
+    ml: -50,
   },
   '@media (min-width: 1024px)': {
-    ml: -2,
-    mt: -15,
-  },
-  '@media (min-width: 1280px)': {
-    mt: -15,
-  },
-  '@media (min-width: 1440px)': {
-    ml: 0,
-    mt: -15,
+    ml: 'auto',
+    mr: 'auto',
   },
 
 }
@@ -451,33 +435,6 @@ const CancelButtonConfig = {
     backgroundColor: '#db0b00'
   },
 
-  '@media (min-width: 320px)': {
-    mt: -2,
-    ml: -12.2,
-  },
-  '@media (min-width: 360px)': {
-    ml: 1,
-    mt: -12,
-  },
-  '@media (min-width: 375px)': {
-    mt: -12,
-    ml: 1
-  },
-  '@media (min-width: 425px)': {
-    mt: -10,
-  },
-  '@media (min-width: 768px)': {
-    ml: 1,
-    mt: -8,
-  },
-  '@media (min-width: 1024px)': {
-    ml: 1,
-    mt: -15,
-  },
-  '@media (min-width: 1440px)': {
-    ml: 1,
-    mt: -15,
-  },
 }
 
 
