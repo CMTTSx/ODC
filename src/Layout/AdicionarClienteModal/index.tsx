@@ -418,8 +418,7 @@ const AddButtonConfig = {
     ml: -50,
   },
   '@media (min-width: 1024px)': {
-    ml: 'auto',
-    mr: 'auto',
+    ml: -2,
   },
 
 }
@@ -430,12 +429,12 @@ const CancelButtonConfig = {
   color: '#fff',
   fontWeight: 600,
   ml: 1,
-
   "&:hover": {
     backgroundColor: '#db0b00'
   },
 
 }
+
 
 export default function BasicModal() {
 
