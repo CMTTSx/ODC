@@ -265,7 +265,7 @@ const telefoneConfig = {
     width: '50%',
   },
   '@media (min-width: 1024px)': {
-    width: '48.8%',
+    width: '48%',
     mt: -7,
     ml: 48,
   },
