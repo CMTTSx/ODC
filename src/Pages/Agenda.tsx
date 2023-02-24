@@ -148,7 +148,7 @@ const TypoName = {
     fontSize: 14,
   },
   '@media (min-width: 1440px) ': {
-    ml: -45,
+    ml: -40,
     mt: -1.8,
     fontSize: 18,
   },
