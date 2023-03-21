@@ -324,8 +324,9 @@ export default function Agenda() {
               Agendamento
             </Typography>
 
+            <Box sx={{display: 'flex', mx:'auto', mt: 5,}}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <Stack spacing={3} width={200} >
+              <Stack spacing={3} width={250} >
                 <DesktopDatePicker
                   label="Data de atendimento"
                   inputFormat="DD/MM/YYYY"
@@ -336,6 +337,7 @@ export default function Agenda() {
               </Stack>
             </LocalizationProvider>
 
+            </Box>
                 <Box
                   sx={BoxConfig}>
 
