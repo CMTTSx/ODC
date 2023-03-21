@@ -4,6 +4,15 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Button, Typography } from '@mui/material';
+import dayjs, { Dayjs } from 'dayjs';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 
 import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Agenda'
@@ -43,7 +52,7 @@ const SidebarConfig = {
   width: '66%',
 }
 
-const ContentConfig ={
+const ContentConfig = {
 
   '@media (min-width: 320px) ': {
     ml: 3.8,
@@ -211,9 +220,9 @@ const TypoHour = {
   fontWeight: 600,
 
   '@media (min-width: 320px) ': {
-  ml: -21,
-  mt: -4,
-  fontSize: 12,
+    ml: -21,
+    mt: -4,
+    fontSize: 12,
   },
   '@media (min-width: 375px) ': {
     ml: -25.5,
@@ -247,8 +256,8 @@ const PopoverConfig = {
   mt: -5.5,
 
   '@media (min-width: 320px) ': {
-  ml: 23,
-  mt: -5,
+    ml: 23,
+    mt: -5,
   },
   '@media (min-width: 375px) ': {
     ml: 28,
@@ -273,7 +282,7 @@ const PopoverConfig = {
     mt: -6,
   },
   '@media (min-width: 1920px) ': {
-  ml: 80,
+    ml: 80,
   },
 }
 
@@ -283,6 +292,21 @@ const ButtonConfig = {
 }
 
 export default function Agenda() {
+
+  var data = new Date();
+  var dia = String(data.getDate()).padStart(2, '0');
+  var mes = String(data.getMonth() + 1).padStart(2, '0');
+  var ano = data.getFullYear();
+  const dataAtual = dia + '/' + mes + '/' + ano;
+
+  const [value, setValue] = React.useState<Dayjs | null>(
+    dayjs(dataAtual),
+  );
+
+  const handleChange = (newValue: Dayjs | null) => {
+    setValue(newValue);
+  };
+
   return (
     <Box sx={{ backgroundColor: '#F6F4F4' }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -294,36 +318,48 @@ export default function Agenda() {
           <Item sx={SidebarConfig}><Sidebar /></Item>
         </Grid>
         <Grid item xs={11}>
-        <Item sx={ContentConfig}>
+          <Item sx={ContentConfig}>
 
-          <Typography sx={TypoAgendamento}>
-            Agendamento
-          </Typography>
+            <Typography sx={TypoAgendamento}>
+              Agendamento
+            </Typography>
 
-          <Box
-                sx={BoxConfig}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <Stack spacing={3} width={200} >
+                <DesktopDatePicker
+                  label="Data de atendimento"
+                  inputFormat="DD/MM/YYYY"
+                  value={value}
+                  onChange={handleChange}
+                  renderInput={(params) => <TextField {...params} />}
+              ></DesktopDatePicker>
+              </Stack>
+            </LocalizationProvider>
 
-                <Typography
-                  sx={TypoAgendado}
-                >Agendado </Typography>
+                <Box
+                  sx={BoxConfig}>
 
-                <Typography
-                  sx={TypoHour}
-                >11:00Hrs</Typography>
+                  <Typography
+                    sx={TypoAgendado}
+                  >Agendado </Typography>
 
-                <Typography
-                  sx={TypoName}
-                >Julia Silva Machado </Typography>
+                  <Typography
+                    sx={TypoHour}
+                  >11:00Hrs</Typography>
 
-                <Box sx={PopoverConfig}><AgendamentoPopover /></Box>
+                  <Typography
+                    sx={TypoName}
+                  >Julia Silva Machado </Typography>
 
-          </Box>
-              <Button sx={ButtonConfig}>
-                <AgendarHorario />
-              </Button>
-          </Item>
+                  <Box sx={PopoverConfig}><AgendamentoPopover /></Box>
+
+                </Box>
+                <Button sx={ButtonConfig}>
+                  <AgendarHorario />
+                </Button>
+              </Item>
+            </Grid>
         </Grid>
-      </Grid>
     </Box>
   );
 }
