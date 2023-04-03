@@ -297,7 +297,7 @@ export default function Agenda() {
   var dia = String(data.getDate()).padStart(2, '0');
   var mes = String(data.getMonth() + 1).padStart(2, '0');
   var ano = data.getFullYear();
-  const dataAtual = dia + '/' + mes + '/' + ano;
+  const dataAtual = mes + '/' + dia + '/' + ano;
 
   const [value, setValue] = React.useState<Dayjs | null>(
     dayjs(dataAtual),
@@ -329,7 +329,7 @@ export default function Agenda() {
               <Stack spacing={3} width={250} >
                 <DesktopDatePicker
                   label="Data de atendimento"
-                  inputFormat="DD/MM/YYYY"
+                  inputFormat="DD/MM/YY"
                   value={value}
                   onChange={handleChange}
                   renderInput={(params) => <TextField {...params} />}
