@@ -21,29 +21,6 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const NavbarConfig = {
-  borderRadius: 0,
-  p: 0,
-  overflow: 'hidden',
-  display: 'flex',
-  bgcolor: '#000744',
-  mt: -1,
-  ml: -1,
-  pr: 2,
-  width: '100%',
-}
-
-const SidebarConfig = {
-  mt: -1,
-  ml: -1,
-  backgroundColor: 'transparent',
-  textAlign: 'inherit',
-  p: 0,
-  color: 'transparent',
-  boxShadow: 0,
-  width: '66%',
-}
-
 const ContentConfig = {
   overflow: 'hidden',
 
@@ -51,20 +28,14 @@ const ContentConfig = {
     ml: 3.8,
     width: '80%',
   },
-  '@media (min-width: 599px) ': {
-    ml: 4,
-    width: '82%',
-  },
-  '@media (min-width: 992px) ': {
-    ml: 5.3,
-  },
   '@media (min-width: 1024px) ': {
     ml: 19,
     height: 500,
   },
   '@media (min-width: 1440px) ': {
     width: '85%',
-    ml: 13,
+    ml: 5,
+    mt: 1,
   },
 
 }
@@ -102,7 +73,6 @@ const TypoSubtitulo = {
 //=================ADICIONAR-NOVO-TICKET-BUTTON=========================
 const AdicionarNovoTicketButton = {
   ml: 42,
-
 
   '@media (min-width: 320px) ': {
     ml: 38,
@@ -156,11 +126,6 @@ const AdicionarNovoTicketButton = {
     ml: 40,
     width: '832px',
   },
-  '@media (min-width: 3840px) ': {
-    ml: 34.8,
-    width: '1250px',
-  },
-
 }
 
 
@@ -225,10 +190,7 @@ const TypoNovoTicket = {
   '@media (min-width: 2560px) ': {
     width: '650px',
     ml: 10.3,
-  },
-  '@media (min-width: 3840px) ': {
-    width: '985px',
-  },
+  }
 }
 
 //=================VERIFICAR-TICKET-BUTTON=========================
@@ -313,11 +275,6 @@ const VerificarTicketButton = {
     mt: -11.8,
     width: '851px'
   },
-  '@media (min-width: 3840px) ': {
-    ml: 100,
-    mt: -11.8,
-    width: '1279px'
-  },
 
 }
 
@@ -396,26 +353,21 @@ const TypoVerificarNovoTicket = {
   '@media (min-width: 2560px) ': {
     ml: 110,
     width: '665px',
-  },
-  '@media (min-width: 3840px) ': {
-    ml: 165,
-    width: '1007px',
-  },
-
+  }
 
 }
 
 
 export default function Suporte() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4' }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem' }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
-          <Item sx={NavbarConfig}><Navbar /></Item>
+          <Navbar />
           <Breadcrumbs />
         </Grid>
         <Grid item xs={1} sx={{ zIndex: 1000, }}>
-          <Item sx={SidebarConfig}><Sidebar /></Item>
+          <Sidebar />
         </Grid>
         <Grid item xs={11}>
           <Item sx={ContentConfig}>
@@ -434,6 +386,9 @@ export default function Suporte() {
 
           </Item>
         </Grid>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+          VERSÃO DEMONSTRATIVA
+        </Box>
       </Grid>
     </Box>
   );

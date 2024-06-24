@@ -4,6 +4,40 @@ import Button from '@mui/material/Button';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { Box } from '@mui/material';
 
+
+const BoxConfig = {
+
+  '@media (min-width: 320px)': {
+    ml: 20,
+    mt: -8,
+  },
+  '@media (min-width: 375px)': {
+    ml: 26,
+    mt: -8,
+  },
+  '@media (min-width: 425px)': {
+    ml: 32,
+    mt: -8.5,
+  },
+  '@media (min-width: 768px)': {
+    ml: 58,
+    mt: -3.7,
+  },
+  '@media (min-width: 1024px)': {
+    ml: 70,
+    mt: -5.2,
+  },
+  '@media (min-width: 1440px)': {
+    ml: 106,
+    mt: -3.5,
+  },
+  '@media (min-width: 2560px)': {
+    ml: 190,
+    mt: -4,
+  },
+
+}
+
 export default function BasicPopover() {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
 
@@ -18,36 +52,9 @@ export default function BasicPopover() {
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
 
-  const BoxConfig = {
-      ml: 147,
-      mt: -9,
-
-      '@media (min-width: 320px) and (max-width: 375px)': {
-        ml: 87,
-        mt: -10,
-    
-      },
-      '@media (min-width: 390px) and (max-width: 424px)': {
-        ml: 87,
-        mt: -10,
-    
-      },
-      '@media (min-width: 425px) and (max-width: 767px)': {
-        ml: 88,
-        mt: -7,
-    
-      },
-      '@media (min-width: 768px) and (max-width: 1023px)': {
-        ml: 125,
-        mt: -8,
-    
-      },
-  }
-
   return (
-    <div>
+    <Box sx={BoxConfig}>
       <Button 
-      sx={BoxConfig}
       onClick={handleClick}>
         <BsThreeDotsVertical size={'1.5em'} color={"#000000"} />
       </Button>
@@ -78,6 +85,6 @@ export default function BasicPopover() {
 
 
       </Popover>
-    </div>
+    </Box>
   );
 }

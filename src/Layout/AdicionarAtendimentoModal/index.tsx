@@ -10,7 +10,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: '1em',
   bgcolor: 'background.paper',
   border: '2px solid #028be6',
   borderRadius: 1,
@@ -18,55 +18,27 @@ const style = {
   p: 4,
 
   '@media (min-width: 320px)': {
-    width: 180,
+    width: '10rem',
     mt: 10,
-    ml: 3.6,
-  },
-  '@media (min-width: 360px)': {
-    width: 210,
-    mt: 10,
-    ml: 3,
+    ml: 4.5,
   },
   '@media (min-width: 375px)': {
     width: 220,
     mt: 0,
-    ml: 3,
-  },
-  '@media (min-width: 384px)': {
-    width: 220,
-    mt: 0,
-    ml: 3,
-  },
-  '@media (min-width: 410px)': {
-    width: 250,
-    mt: -5,
-    ml: 3,
+    ml: 4,
   },
   '@media (min-width: 425px)': {
-    width: 260,
-    mt: 0,
-    ml: 2,
+    width: 230,
+    ml: -2,
   },
   '@media (min-width: 768px)': {
     width: 525,
     mt: 0,
     ml: 2,
   },
-  '@media (min-width: 800px)': {
-    mt: -30,
-  },
-  '@media (min-width: 810px)': {
-    ml: 0 ,
-    mt: -15,
-  },
   '@media (min-width: 1024px) ': {
     ml: 5,
     mt: -20,
-    width: '40%',
-  },
-  '@media (min-width: 1280px) ': {
-    ml: 5,
-    mt: 10,
     width: '40%',
   },
   '@media (min-width: 1440px) ': {
@@ -74,23 +46,11 @@ const style = {
     mt: -10,
     width: '40%',
   },
-  '@media (min-width: 1920px) ': {
-    mt: -10,
-    ml: -6,
-    width: '40%',
-  },
   '@media (min-width: 2560px) ': {
     mt: -30,
     ml: -10,
     width: '30%',
   },
-  '@media (min-width: 3840px) ': {
-    mt: -70,
-    ml: -30,
-    width: '25%',
-  },
-  
-
   
 };
 
@@ -99,34 +59,16 @@ const ButtonConfig = {
   ml: 23,
 
   '@media (min-width: 320px)': {
-    ml: -5,
-  },
-  '@media (min-width: 360px)': {
-    ml: -5,
-  },
-  '@media (min-width: 390px)': {
-    ml: -5.5,
-  },
-  '@media (min-width: 411px)': {
-    ml: -4,
+    ml: -10,
   },
   '@media (min-width: 425px)': {
     ml: 22.5,
   },
-  '@media (min-width: 1280px)': {
-    ml: 35,
-  },
   '@media (min-width: 1440px)': {
     ml: 43,
   },
-  '@media (min-width: 1920px)': {
-    ml: 23,
-  },
   '@media (min-width: 2560px)': {
     ml: 23,
-  },
-  '@media (min-width: 3840px) ': {
-    ml: 45,
   },
 
 }
@@ -142,13 +84,10 @@ const AdicionarConfig = {
   },
 
   '@media (min-width: 320px)': {
-    ml: 9.5,
-  },
-  '@media (min-width: 360px)': {
-    ml: 5,
+    ml: 8,
   },
   '@media (min-width: 375px)': {
-    ml: 6,
+    ml: 11,
   },
   '@media (min-width: 425px)': {
     ml: -19,
@@ -157,13 +96,13 @@ const AdicionarConfig = {
     ml: 16,
   },
   '@media (min-width: 1024px)': {
-    ml: 2.8,
+    ml: 4,
+    mr: -5,
   },
-  '@media (min-width: 1920px)': {
-    ml: 47,
+  '@media (min-width: 2560px)': {
+    ml: '24rem',
+    mr: -5,
   },
-
-
 
 }
 
@@ -178,19 +117,20 @@ const CancelarConfig = {
   },
 
   '@media (min-width: 320px)': {
-    ml: 9.5,
-  },
-  '@media (min-width: 360px)': {
-    ml: 18,
-    mt: -7.4,
+    ml: 20.5,
+    mt: -7.2,
   },
   '@media (min-width: 375px)': {
-    ml: 20,
+    ml: 24,
     mt: -7.3,
   },
   '@media (min-width: 425px)': {
     mt: -0.1,
     ml: 1,
+  },
+  '@media (min-width: 1024px)': {
+    mt: -0.1,
+    ml: 6,
   },
   
 }
@@ -232,7 +172,6 @@ export default function BasicModal() {
             mt: 2,
           }}>
           <TextField id="outlined-basic" label="Digite o nome do paciente" variant="outlined" fullWidth={true} />
-
           </Box>
          
           <Box sx={ButtonConfig}>

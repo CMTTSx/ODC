@@ -9,35 +9,38 @@ const BoxConfig = {
   ml: 53,
   mr: 'auto',
   mt: 10,
+  zIndex: 1,
+  backgroundColor: '#fff',
 
   '@media (min-width: 320px) ': {
-    ml: 0.2,
-    mt: 1,
-    width: '100%',
+    ml: '3rem',
+    mt: 5,
+    width: '80%',
   },
-  '@media (min-width: 599px) ': {
-    ml: 0.2,
-    mt: 1,
-    width: '100%',
+  '@media (min-width: 375px) ': {
+    ml: '2.5rem',
+    width: '85%',
   },
-  '@media (min-width: 992px) ': {
-    ml: 19,
-    width: '55%',
+  '@media (min-width: 425px) ': {
+    ml: '3rem',
+    width: '82.5%',
+  },
+  '@media (min-width: 768px) ': {
+    ml: 8,
+    width: '78%',
   },
   '@media (min-width: 1024px) ': {
-    ml: 20,
-    mt: 4,
-  },
-  '@media (min-width: 1280px) ': {
-    ml: 25,
+    ml: 13,
+    width: '70%',
   },
   '@media (min-width: 1440px) ': {
-    ml: 30,
+    width: '70%',
+    ml: 18
   },
   '@media (min-width: 2560px) ': {
-    ml: 45,
+    ml: 25,
+    width: '70%',
   },
-  
 
 }
 
@@ -63,8 +66,6 @@ const Box3 = {
   textAlign: 'center',
   ml: 'auto',
   mr: 'auto',
-
- 
 }
 
 

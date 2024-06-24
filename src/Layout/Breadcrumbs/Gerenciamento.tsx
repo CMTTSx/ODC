@@ -13,21 +13,8 @@ function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
 }
 
 const BreadCrumbs = {
-  mt: 0.5,
-  mb: 1.5,
   backgroundColor: '#fff',
-  height: 35,
-
-
-  '@media (min-width: 320px) and (max-width: 1024px)': {
-    mt: 0,
-    ml: 'auto',
-    mr: 'auto',
-    pr: 1,
-    border: 1,
-    color: '#e8e8e8'
-  }
-
+  color: '#e8e8e8',
 }
 
 export default function BreadcrumbsRef() {
@@ -40,14 +27,10 @@ export default function BreadcrumbsRef() {
           color="inherit"
           href="/paginaInicial"
         >
-          
-          <LinkRouter to='/paginaInicial'><Box sx={{mt: 0.5}}>< ImHome size={18} /></Box></LinkRouter>          <IoIosArrowForward   />
-
+          <LinkRouter to='/paginaInicial'><Box sx={{mt: 0.5}}>< ImHome size={18} /></Box></LinkRouter> <IoIosArrowForward />
           <Typography sx={{
-            ml: 2,
             mt: 0.3,
           }}>Gerenciamento</Typography>
-          
         </Link>
       </Breadcrumbs>
     </Box>

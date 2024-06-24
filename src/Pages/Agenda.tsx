@@ -1,18 +1,12 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import { Button, Typography } from '@mui/material';
+import { Button, Grid, Paper, styled, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { TimePicker } from '@mui/x-date-pickers/TimePicker';
-import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 
 import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Agenda'
@@ -20,67 +14,26 @@ import Sidebar from '../Layout/Sidebar';
 import AgendarHorario from '../Layout/AgendarAtendimentoModal'
 import AgendamentoPopover from '../Layout/AgendamentoPopover'
 
+const BoxConfig = {
+  backgroundColor: '#F6F4F4',
+  height: '50rem',
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
-const NavbarConfig = {
-  borderRadius: 0,
-  p: 0,
-  overflow: 'hidden',
-  display: 'flex',
-  bgcolor: '#000744',
-  mt: -1,
-  ml: -1,
-  pr: 2,
-  width: '100%',
-}
-
-const SidebarConfig = {
-  mt: -1,
-  ml: -1,
-  backgroundColor: 'transparent',
-  textAlign: 'inherit',
-  p: 0,
-  color: 'transparent',
-  boxShadow: 0,
-  width: '66%',
+ 
 }
 
 const ContentConfig = {
 
   '@media (min-width: 320px) ': {
-    ml: 3.8,
-    width: '83%',
-    overflowY: 'auto',
-    overflowX: 'hidden',
+    ml: 5,
+    mt: 0,
+    width: '84%',
+    textAlign: 'center',
+    borderColor: '#E5E5E5',
+    backgroundColor: '#fff',
   },
-  '@media (min-width: 599px) ': {
-    ml: 4,
-    width: '82%',
-    overflowX: 'hidden',
-  },
-  '@media (min-width: 992px) ': {
-    ml: 5.3,
-    overflowX: 'hidden',
-  },
-  '@media (min-width: 1024px) ': {
-    ml: 19,
-    overflowX: 'hidden',
-  },
-  '@media (min-width: 1440px) ': {
-    width: '85%',
-    ml: 13,
-  },
-
 }
 
-const BoxConfig = {
+const BoardConfig = {
   mt: 3,
   mb: 1,
   ml: 'auto',
@@ -89,8 +42,7 @@ const BoxConfig = {
   backgroundColor: '#fff',
   borderColor: '#cfcfcf',
   width: '60em',
-  height: '63px',
-  zIndex: 2,
+  height: '50rem',
 
   '@media (min-width: 320px) ': {
     width: '100%',
@@ -104,27 +56,22 @@ const BoxConfig = {
     width: '50em',
     height: '40px',
   },
-  '@media (min-width: 1920px) ': {
-    width: '50em',
-    height: '45px',
-  },
 
 }
 
 const TypoAgendamento = {
   zIndex: 1,
   mt: 2,
-  ml: 'auto',
-  mr: 'auto',
+  mx: 'auto',
   fontSize: 35,
   fontWeight: 600,
-  color: '#000000',
 
   '@media (min-width: 320px) ': {
     fontSize: 18,
   },
   '@media (min-width: 1024px) ': {
     fontSize: 30,
+    textAlign: 'center',
   },
 }
 
@@ -167,7 +114,6 @@ const TypoName = {
     fontSize: 19,
   },
 
-
 }
 
 const TypoAgendado = {
@@ -196,13 +142,8 @@ const TypoAgendado = {
     mt: 2.5,
     fontSize: 12,
   },
-  '@media (min-width: 1280px) ': {
-    ml: -94.5,
-    mt: 2.5,
-    fontSize: 12,
-  },
   '@media (min-width: 1440px) ': {
-    ml: -75,
+    ml: -84.8,
     fontSize: 12,
   },
   '@media (min-width: 1920px) ': {
@@ -222,7 +163,7 @@ const TypoHour = {
   '@media (min-width: 320px) ': {
     ml: -21,
     mt: -4,
-    fontSize: 12,
+    fontSize: 12.5,
   },
   '@media (min-width: 375px) ': {
     ml: -25.5,
@@ -235,12 +176,8 @@ const TypoHour = {
     ml: -75,
     mt: -3.8,
   },
-  '@media (min-width: 1280px) ': {
-    ml: -95,
-    mt: -3.8,
-  },
   '@media (min-width: 1440px) ': {
-    ml: -75,
+    ml: -85,
     mt: -3.8,
   },
   '@media (min-width: 1920px) ': {
@@ -274,11 +211,8 @@ const PopoverConfig = {
     ml: 75,
     mt: -5.1,
   },
-  '@media(min-width: 1280px) ': {
-    ml: 90,
-  },
   '@media (min-width: 1440px) ': {
-    ml: 75,
+    ml: 88,
     mt: -6,
   },
   '@media (min-width: 1920px) ': {
@@ -291,6 +225,13 @@ const ButtonConfig = {
   ml: 0,
 }
 
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 export default function Agenda() {
 
   var data = new Date();
@@ -308,60 +249,64 @@ export default function Agenda() {
   };
 
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4' }}>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={20}>
-          <Item sx={NavbarConfig}><Navbar /></Item>
-          <Breadcrumbs />
-        </Grid>
-        <Grid item xs={1} sx={{ zIndex: 1000, }}>
-          <Item sx={SidebarConfig}><Sidebar /></Item>
-        </Grid>
-        <Grid item xs={11}>
-          <Item sx={ContentConfig}>
+    <Box sx={BoxConfig}>
+    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid item xs={20} >
+        <Navbar />
+        <Breadcrumbs />
+      </Grid>
+      <Grid item xs={1} sx={{ zIndex: 1000, }}>
+        <Sidebar />
+      </Grid>
+      <Grid item xs={11}>
+      <Box sx={ContentConfig}>
 
-            <Typography sx={TypoAgendamento}>
-              Agendamento
-            </Typography>
+<Typography sx={TypoAgendamento}>
+  Agendamento
+</Typography>
 
-            <Box sx={{display: 'flex', mx:'auto', mt: 5,}}>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <Stack spacing={3} width={250} >
-                <DesktopDatePicker
-                  label="Data de atendimento"
-                  inputFormat="DD/MM/YY"
-                  value={value}
-                  onChange={handleChange}
-                  renderInput={(params) => <TextField {...params} />}
-              ></DesktopDatePicker>
-              </Stack>
-            </LocalizationProvider>
+<Box sx={{ display: 'flex', mx: 'auto', mt: 5, }}>
+  <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <Stack spacing={3} width={250} >
+      <DesktopDatePicker
+        label="Data de atendimento"
+        inputFormat="DD/MM/YY"
+        value={value}
+        onChange={handleChange}
+        renderInput={(params) => <TextField {...params} />}
+      ></DesktopDatePicker>
+    </Stack>
+  </LocalizationProvider>
 
-            </Box>
-                <Box
-                  sx={BoxConfig}>
+</Box>
+<Box
+  sx={BoardConfig}>
 
-                  <Typography
-                    sx={TypoAgendado}
-                  >Agendado </Typography>
+  <Typography
+    sx={TypoAgendado}
+  >Agendado </Typography>
 
-                  <Typography
-                    sx={TypoHour}
-                  >11:00Hrs</Typography>
+  <Typography
+    sx={TypoHour}
+  >11:00Hrs</Typography>
 
-                  <Typography
-                    sx={TypoName}
-                  >Julia Silva Machado </Typography>
+  <Typography
+    sx={TypoName}
+  >Julia Silva Machado
+  </Typography>
 
-                  <Box sx={PopoverConfig}><AgendamentoPopover /></Box>
+  <Box sx={PopoverConfig}><AgendamentoPopover /></Box>
 
-                </Box>
-                <Button sx={ButtonConfig}>
-                  <AgendarHorario />
-                </Button>
-              </Item>
-            </Grid>
-        </Grid>
-    </Box>
+</Box>
+<Button sx={ButtonConfig}>
+  <AgendarHorario />
+</Button>
+</Box>
+      </Grid>
+      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
+    </Grid>
+  </Box>
   );
 }

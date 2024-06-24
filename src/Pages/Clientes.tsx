@@ -11,7 +11,6 @@ import Sidebar from '../Layout/Sidebar';
 import AdicionarCliente from '../Layout/AdicionarClienteModal';
 import { BsSearch } from 'react-icons/bs';
 
-
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -20,62 +19,27 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const NavbarConfig = {
-  borderRadius: 0,
-  p: 0,
-  overflow: 'hidden',
-  display: 'flex',
-  bgcolor: '#000744',
-  mt: -1,
-  ml: -1,
-  pr: 2,
-  width: '100%',
-}
-
-const SidebarConfig = {
-  mt: -1,
-  ml: -1,
-  backgroundColor: 'transparent',
-  textAlign: 'inherit',
-  p: 0,
-  color: 'transparent',
-  boxShadow: 0,
-  width: '66%',
-}
-
 const ContentConfig = {
 
   '@media (min-width: 320px) ': {
-    ml: 3.8,
-    width: '83%',
-    overflowY: 'auto',
-    overflowX: 'hidden',
-  },
-  '@media (min-width: 599px) ': {
-    ml: 4,
-    width: '82%',
-    overflowX: 'hidden',
-  },
-  '@media (min-width: 992px) ': {
-    ml: 5.3,
-    overflowX: 'hidden',
+    ml: 5,
+    width: '80%',
+    overflow: 'hidden',
   },
   '@media (min-width: 1024px) ': {
     ml: 19,
-    overflowX: 'hidden',
   },
   '@media (min-width: 1440px) ': {
-    width: '85%',
-    ml: 13,
+    width: '60rem',
+    ml: 18,
+    mt: 10,
   },
 
 }
-
 
 function SearchButton() {
   alert("Botão de Pesquisar Cadastros!");
 }
-
 
 const Typoclientes = {
   fontSize: 35,
@@ -111,44 +75,39 @@ const InputConfig = {
 const ButtonAddConfig = {
   ml: 0,
   mt: 2,
-
-
 }
-
-
 
 export default function Clientes() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4' }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem', }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
-          <Item sx={NavbarConfig}><Navbar /></Item>
+          <Navbar />
           <Breadcrumbs />
         </Grid>
         <Grid item xs={1} sx={{ zIndex: 1000, }}>
-          <Item sx={SidebarConfig}><Sidebar /></Item>
+          <Sidebar />
         </Grid>
         <Grid item xs={11}>
           <Item sx={ContentConfig}>
 
-
             <Typography sx={Typoclientes}>Clientes</Typography>
 
-                <Box sx={InputConfig}>
-                  <TextField label="Digite o nome do Cliente" variant="standard" fullWidth={true} autoFocus={true} />
-                  <Button sx={{
-                    border: 1,
-                    cursor: 'pointer',
-                  }} onClick={SearchButton}> <BsSearch />
-                  </Button>
+            <Box sx={InputConfig}>
+              <TextField label="Digite o nome do Cliente" variant="standard" fullWidth={true} autoFocus={true} />
+              <Button sx={{
+                border: 1,
+                cursor: 'pointer',
+              }} onClick={SearchButton}> <BsSearch />
+              </Button>
 
-                </Box>
-
-
-              <Button sx={ButtonAddConfig}><AdicionarCliente /> </Button>
-
+            </Box>
+            <Button sx={ButtonAddConfig}><AdicionarCliente /> </Button>
           </Item>
         </Grid>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
       </Grid>
     </Box>
   );

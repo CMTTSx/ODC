@@ -44,38 +44,30 @@ function a11yProps(index: number) {
   };
 }
 
-//Configurar TOPTAB EM ATENDIMENTO || FINALIZADO || TODOS
+//Configurar TOPTAB ATENDIMENTO || FINALIZADO || TODOS
 const TabsConfig = {
-  ml: -20,
-
+  
   '@media (min-width: 320px) ': {
-    width: '300%',
-    ml: -53,
-    mt: -6,
+    zIndex: 1,
   },
   '@media (min-width: 375px) ': {
-    width: '300%',
-    ml: -53,
-    mt: -6,
+    ml: '2rem',
+  },
+  '@media (min-width: 425px) ': {
+    ml: '3rem',
   },
   '@media (min-width: 768px) ': {
-    ml: -43,
+    ml: 23,
   },
   '@media (min-width: 1024px) ': {
-    ml: -4,
-  },
-  '@media (min-width: 1280px) ': {
-    ml: -20,
+    ml: 37,
   },
   '@media (min-width: 1440px) ': {
-    ml: 40,
-  },
-  '@media (min-width: 1920px) ': {
-    ml: 5,
+    ml: 74,
   },
   '@media (min-width: 2560px) ': {
-    ml: 36,
-  },
+    ml: 158,
+  }
 
 }
 
@@ -83,65 +75,81 @@ const TabsConfig = {
 const BoxConfig = {
   mt: 10,
   mb: 10,
-  mr: 'auto',
+  zIndex: 1,
 
   '@media (min-width: 320px) ': {
-    ml: 0,
-    width: '100%',
+    ml: 4.8,
+  },
+  '@media (min-width: 375px) ': {
+    ml: 4,
   },
   '@media (min-width: 425px) ': {
-    ml: 0,
-    width: '100%',
+    ml: 3,
   },
-  '@media (min-width: 599px) ': {
-    ml: 0,
-    width: '100%',
-  },
-  '@media (min-width: 992px) ': {
+  '@media (min-width: 768px) ': {
     ml: 8,
+    width: '77%',
   },
   '@media (min-width: 1024px) ': {
-    ml: 0,
+    ml: 13,
+    width: '70%',
   },
-  '@media (min-width: 1920px) ': {
-    ml: 30,
-    width: '55%',
+  '@media (min-width: 1440px) ': {
+    ml: 18,
+    width: '69.3%',
   },
   '@media (min-width: 2560px) ': {
-    ml: 45,
+    ml: 25.5,
+    mt: 10,
+    width: '69.5%',
   },
-  
+
 }
 
 // Button Adicionar Atendimento
 const ButtonConfig = {
-  ml: -2,
-  mt: 2,
-  zIndex: 1,
 
   '@media (min-width: 320px) ': {
-    ml: 0,
+    mt: '1rem',
+    ml: '1rem',
   },
-  '@media (min-width: 599px) ': {
-    ml: 0,
+  '@media (min-width: 375px) ': {
+    ml: '1.3rem',
+  },
+  '@media (min-width: 425px) ': {
+    ml: '3rem',
+  },
+  '@media (min-width: 768px) ': {
+    ml: '8rem',
+  },
+  '@media (min-width: 1024px) ': {
+    ml: '11rem',
+  },
+  '@media (min-width: 1440px) ': {
+    ml: '21.4rem',
+  },
+  '@media (min-width: 2560px) ': {
+    ml: '43rem',
   },
 
 }
 
-
-// Button Em Atendimento
+// Atendimento
 const Tab1Config = {
   ml: 55,
 
   '@media (min-width: 320px) ': {
-    ml: 52,
+    ml: 2,
+  },
+  '@media (min-width: 375px) ': {
+    ml: 1,
   },
 
 }
 
 //Finalizados
 const Tab2Config = {
- 
+
   '@media (min-width: 320px) ': {
     visibility: 'hidden'
   },
@@ -152,7 +160,7 @@ const Tab2Config = {
 
 //Todos
 const Tab3Config = {
- 
+
   '@media (min-width: 320px) ': {
     ml: -16,
   },
@@ -167,9 +175,6 @@ const Tab3Config = {
   },
 }
 
-
-
-
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
 
@@ -181,18 +186,18 @@ export default function BasicTabs() {
     <Box sx={BoxConfig}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} sx={TabsConfig}>
-          <Tab label="Em atendimento" {...a11yProps(0)} sx={Tab1Config} />
+          <Tab label="Atendimentos" {...a11yProps(0)} sx={Tab1Config} />
           <Tab label="Finalizado" {...a11yProps(1)} sx={Tab2Config} />
           <Tab label="Todos" {...a11yProps(2)} sx={Tab3Config} />
         </Tabs>
       </Box>
       {/*Tabs 1*/}
       <TabPanel value={value} index={0}>
-      <Box>
-      <ServiceBar />
-      <Dummybar />
-      </Box>
-      <Button sx={ButtonConfig}><AtendimentoModal /> </Button>
+        <Box>
+          <ServiceBar />
+          <Dummybar />
+        </Box>
+        <Button sx={ButtonConfig}><AtendimentoModal /></Button>
       </TabPanel>
       {/*Tabs 2*/}
       <TabPanel value={value} index={1}>
@@ -200,7 +205,7 @@ export default function BasicTabs() {
           mt: 1,
         }}>
         </Box>
-        
+
         <Box sx={{
           mt: 1,
         }}>
@@ -209,33 +214,30 @@ export default function BasicTabs() {
       {/*Tabs 3*/}
       <TabPanel value={value} index={2}>
         <Box sx={{
-            mt: 1,
         }}>
           <Box sx={{
-          mt: 1
         }}>
-        <ServiceBar />
-        </Box>
-        <Dummybar />
-        </Box>
-
-        <Box sx={{
-          mt: 1
-        }}>
-        <Dummybar2 />
-        
+            <ServiceBar />
+          </Box>
+          <Dummybar />
         </Box>
 
         <Box sx={{
           mt: 1
         }}>
-        <Dummybar3 />
+          <Dummybar2 />
         </Box>
 
         <Box sx={{
           mt: 1
         }}>
-        <Dummybar4 />
+          <Dummybar3 />
+        </Box>
+
+        <Box sx={{
+          mt: 1
+        }}>
+          <Dummybar4 />
         </Box>
 
       </TabPanel>

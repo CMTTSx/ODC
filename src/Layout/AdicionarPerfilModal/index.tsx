@@ -443,17 +443,13 @@ export default function BasicModal() {
   const handleClose = () => setOpen(false);
 
   const [nomeCompleto, setNomeCompleto] = React.useState('');
-  const [cpf, setCpf] = React.useState('');
+  const [cpf, setCpf] = React.useState();
   const [age, setAge] = React.useState('');
   const [sexo, setSexo] = React.useState('');
   const [estadoCivil, setEstadoCivil] = React.useState('');
-
-
   const [cidade, setCidade] = React.useState('');
   const [estado, setEstado] = React.useState('');
-
   const [perfil, setPerfil] = React.useState('');
-  
   const [administrador, setAdministrador] = React.useState('');
   const [recepcionista, setRecepcionista] = React.useState('');
   const [odontologo, setOdontologo] = React.useState('');
@@ -463,8 +459,6 @@ export default function BasicModal() {
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
   };
-
-
 
   return (
     <div>
@@ -499,7 +493,6 @@ export default function BasicModal() {
             required
             label="Nome Completo"
             fullWidth={true}
-            value={setNomeCompleto}
             sx={{
               mt: 1,
             }}

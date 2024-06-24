@@ -22,29 +22,6 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const NavbarConfig = {
-  borderRadius: 0,
-  p: 0,
-  overflow: 'hidden',
-  display: 'flex',
-  bgcolor: '#000744',
-  mt: -1,
-  ml: -1,
-  pr: 2,
-  width: '100%',
-}
-
-const SidebarConfig = {
-  mt: -1,
-  ml: -1,
-  backgroundColor: 'transparent',
-  textAlign: 'inherit',
-  p: 0,
-  color: 'transparent',
-  boxShadow: 0,
-  width: '66%',
-}
-
 const ContentConfig = {
 
   '@media (min-width: 320px) ': {
@@ -53,21 +30,12 @@ const ContentConfig = {
     overflowY: 'auto',
     overflowX: 'hidden',
   },
-  '@media (min-width: 599px) ': {
-    ml: 4,
-    width: '82%',
-    overflowX: 'hidden',
-  },
-  '@media (min-width: 992px) ': {
-    ml: 5.3,
-    overflowX: 'hidden',
-  },
   '@media (min-width: 1024px) ': {
     ml: 19,
     overflowX: 'hidden',
   },
   '@media (min-width: 1440px) ': {
-    width: '85%',
+    width: '75%',
     ml: 13,
   },
 
@@ -138,18 +106,16 @@ const ButtonConfig = {
 
 }
 
-
-
 export default function Financeiro() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4' }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem' }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
-          <Item sx={NavbarConfig}><Navbar /></Item>
+          <Navbar />
           <Breadcrumbs />
         </Grid>
         <Grid item xs={1} sx={{ zIndex: 1000, }}>
-          <Item sx={SidebarConfig}><Sidebar /></Item>
+          <Sidebar />
         </Grid>
         <Grid item xs={11}>
           <Item sx={ContentConfig}>
@@ -170,10 +136,11 @@ export default function Financeiro() {
                 <Typography>Nota Fiscal Eletrônica</Typography>
               </Button>
             </Box>
-
-
           </Item>
         </Grid>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
       </Grid>
     </Box>
   );

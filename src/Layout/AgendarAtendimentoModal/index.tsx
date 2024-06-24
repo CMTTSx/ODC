@@ -18,10 +18,12 @@ const style = {
   borderRadius: 1,
   boxShadow: 2,
   p: 4,
+  overflow: 'hidden',
+
   '@media (min-width: 320px)': {
     width: 180,
     ml: 4,
-    mt: 17,
+    mt: 0,
   },
   '@media (min-width: 360px)': {
     width: 200,
@@ -57,22 +59,11 @@ const style = {
   '@media (min-width: 1024px)': {
     width: 400,
     ml: 0,
-    mt: -25,
-  },
-  '@media (min-width: 1280px)': {
-    width: 400,
-    ml: 0,
     mt: 0,
   },
   '@media (min-width: 2560px)': {
     ml: 0,
   },
-  '@media (min-width: 3840px)': {
-    ml: 0,
-    mt: -80,
-    width: 1000,
-  },
-
 };
 
 const AgendarButtonConfig = {

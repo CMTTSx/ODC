@@ -19,28 +19,6 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const NavbarConfig = {
-  borderRadius: 0,
-  p: 0,
-  overflow: 'hidden',
-  display: 'flex',
-  bgcolor: '#000744',
-  mt: -1,
-  ml: -1,
-  pr: 2,
-  width: '100%',
-}
-
-const SidebarConfig = {
-  mt: -1,
-  ml: -1,
-  backgroundColor: 'transparent',
-  textAlign: 'inherit',
-  p: 0,
-  color: 'transparent',
-  boxShadow: 0,
-  width: '66%',
-}
 
 const ContentConfig = {
   overflowX: 'hidden',
@@ -48,22 +26,13 @@ const ContentConfig = {
   '@media (min-width: 320px) ': {
     ml: 3.8,
     width: '83%',
-
-  },
-  '@media (min-width: 599px) ': {
-    ml: 4,
-    width: '82%',
-  },
-  '@media (min-width: 992px) ': {
-    ml: 5.3,
   },
   '@media (min-width: 1024px) ': {
     ml: 19,
   },
   '@media (min-width: 1440px) ': {
     width: '85%',
-    height: 'auto',
-    ml: 13,
+    ml: 5,
   },
 
 }
@@ -84,17 +53,17 @@ const TypoGerenciamento = {
     fontSize: 35,
   },
 
-
 }
 
+// tab
 const BoxConfig = {
   border: 1,
   ml: 'auto',
   mr: 'auto',
   mt: 4,
   mb: 1,
-  width: '60%',
-  height: '4.5em',
+  width: '20rem',
+  height: '3em',
 
   '@media (min-width: 320px) ': {
     ml: 2,
@@ -106,44 +75,31 @@ const BoxConfig = {
     mr: 'auto',
   },
   '@media (min-width: 2560px) ': {
-    width: '40%',
+    width: '35%',
     ml: 'auto',
     mr: 'auto',
   },
-  '@media (min-width: 3840px) ': {
-    width: '30%',
-    ml: 'auto',
-    mr: 'auto',
-  },
-
 
 }
 
 const TypoProfile = {
   textAlign: 'start',
   pl: 2,
-  mt: 1.6,
-  fontSize: 18,
+  mt: 0.5,
+  fontSize: 15,
   fontWeight: 600,
   color: '#000000',
-
-
 }
 
 const TypoName = {
   textAlign: 'start',
   color: '#000000',
-  pl: 3.5,
-  pt: -2,
-
-
+  pl: 2.5,
+  mt: -0.6,
+  fontSize: 14,
 }
 
-
-
 const PopoverConfig = {
-  ml: -6,
-  mt: -0.5,
 
   '@media (min-width: 320px) ': {
     ml: -80,
@@ -169,42 +125,31 @@ const PopoverConfig = {
     ml: -52,
     mt: -0.5,
   },
-  '@media (min-width: 1280px) ': {
-    ml: -38,
-    mt: -0.5,
-  },
   '@media (min-width: 1440px) ': {
-    ml: -30,
-    mt: -0.5,
+    ml: -25,
+    mt: 0.4,
   },
   '@media (min-width: 1920px) ': {
     ml: -6,
     mt: -0.5,
   },
   '@media (min-width: 2560px) ': {
-    ml: -10,
+    ml: '-10%',
     mt: -0.5,
-  },
-  '@media (min-width: 3840px) ': {
-    ml: -6,
-    mt: -0.5,
-  },
+  }
 
 }
 
-
-
-
 export default function Gerenciamento() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4' }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem' }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
-          <Item sx={NavbarConfig}><Navbar /></Item>
+          <Navbar />
           <Breadcrumbs />
         </Grid>
         <Grid item xs={1} sx={{ zIndex: 1000, }}>
-          <Item sx={SidebarConfig}><Sidebar /></Item>
+        <Sidebar />
         </Grid>
         <Grid item xs={11}>
           <Item sx={ContentConfig}>
@@ -217,13 +162,13 @@ export default function Gerenciamento() {
               <Typography sx={TypoName}>Fabíola T. Reis</Typography>
 
               <Box sx={PopoverConfig}><GerenciamentoPopover /></Box>
-
             </Box>
-
             <Button><AdicionarPerfilModal /></Button>
-
           </Item>
         </Grid>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
       </Grid>
     </Box>
   );

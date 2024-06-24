@@ -32,14 +32,6 @@ const style = {
     mt: 8,
     ml: 5,
   },
-  '@media (min-width: 360px)': {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 207,
-    height: 500,
-    mt: 8,
-    ml: 5,
-  },
   '@media (min-width: 375px)': {
     display: 'flex',
     flexDirection: 'column',
@@ -56,14 +48,7 @@ const style = {
     mt: 7,
     ml: 5,
   },
-  '@media (min-width: 411px)': {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 260,
-    height: 500,
-    mt: 0,
-    ml: 5,
-  },
+
   '@media (min-width: 425px)': {
     display: 'flex',
     flexDirection: 'column',
@@ -138,7 +123,6 @@ const style = {
   '@media (min-width: 3840px)': {
     mt: -55,
   },
-
 
 };
 
@@ -391,7 +375,6 @@ const cidadeConfig = {
   },
 }
 
-
 const AddButtonConfig = {
   display: 'inline',
   backgroundColor: '#4DEA80',
@@ -435,7 +418,6 @@ const CancelButtonConfig = {
 
 }
 
-
 export default function BasicModal() {
 
   const [open, setOpen] = React.useState(false);
@@ -447,12 +429,8 @@ export default function BasicModal() {
   const [age, setAge] = React.useState('');
   const [sexo, setSexo] = React.useState('');
   const [estadoCivil, setEstadoCivil] = React.useState('');
-
-
   const [cidade, setCidade] = React.useState('');
   const [estado, setEstado] = React.useState('');
-
-  
   const [administrador, setAdministrador] = React.useState('');
   const [recepcionista, setRecepcionista] = React.useState('');
   const [odontologo, setOdontologo] = React.useState('');
@@ -462,8 +440,6 @@ export default function BasicModal() {
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
   };
-
-
 
   return (
     <div>
@@ -493,12 +469,10 @@ export default function BasicModal() {
 
           <Typography sx={{mt: 2, mb: 1}}>Dados Pessoais</Typography>
 
-
           <TextField
             required
             label="Nome Completo"
             fullWidth={true}
-            value={setNomeCompleto}
             sx={{
               mt: 1,
             }}
@@ -508,7 +482,8 @@ export default function BasicModal() {
             required
             label="CPF"
             sx={cpfConfig}
-            value={setCpf}
+            type='number'
+            
           />
 
           <TextField
@@ -535,6 +510,7 @@ export default function BasicModal() {
             required
             label="Telefone"
             sx={telefoneConfig}
+            type='number'
           />
 
           <Box sx={estadoCivilConfig}>
@@ -554,7 +530,6 @@ export default function BasicModal() {
           </Box>
 
           <Typography sx={EnderecoConfig}>Endereço</Typography>
-
 
           <TextField
             required
@@ -597,7 +572,6 @@ export default function BasicModal() {
                 onChange={handleChange}
               >
                 <MenuItem value={'C'}>Cidade</MenuItem>
-
 
               </Select>
             </FormControl>

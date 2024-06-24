@@ -21,21 +21,20 @@ export default function AccountMenu() {
     setAnchorEl(null);
   };
 
-const AvatarConfig = {
-  width: '2rem',
-  height: '2rem',
-  backgroundColor: '#5cb6fa',
-
-  '@media (min-width: 320px) and (max-width: 767px)': {
-  width: '1.5rem',
-  height: '1.5rem',
-  mt: '0.2em'
-  },
-  '@media (min-width: 768px) and (max-width: 1023px)': {
+  const AvatarConfig = {
+    backgroundColor: '#5cb6fa',
     width: '1.5rem',
     height: '1.5rem',
-    mt: '0.4rem',
+
+    '@media (min-width: 375px)': {
+      ml: '5%',
   },
+
+    '@media (min-width: 425px)': {
+      ml: '5%',
+  },
+
+
 
 }
 
