@@ -27,13 +27,17 @@ const ContentConfig = {
     overflow: 'hidden',
   },
   '@media (min-width: 1024px) ': {
-    ml: 19,
+    ml: 8,
   },
   '@media (min-width: 1440px) ': {
     width: '60rem',
     ml: 18,
     mt: 10,
   },
+  '@media (min-width: 2560px) ': {
+    ml: '35rem',
+  },
+
 
 }
 

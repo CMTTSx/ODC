@@ -21,9 +21,11 @@ export default function Sidebar() {
     boxShadow: 5,
     backgroundColor: '#F1F4FE',
     pb: 5,
-    
-    "&:hover": {
+
+    '@media (min-width: 1024px)': {
+      "&:hover": {
       width: '20em',
+    },
     },
 
   };

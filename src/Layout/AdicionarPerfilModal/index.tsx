@@ -32,36 +32,12 @@ const style = {
     mt: 8,
     ml: 5,
   },
-  '@media (min-width: 360px)': {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 207,
-    height: 500,
-    mt: 8,
-    ml: 5,
-  },
   '@media (min-width: 375px)': {
     display: 'flex',
     flexDirection: 'column',
     width: 225,
     height: 500,
     mt: 8,
-    ml: 5,
-  },
-  '@media (min-width: 390px)': {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 230,
-    height: 500,
-    mt: 7,
-    ml: 5,
-  },
-  '@media (min-width: 411px)': {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 260,
-    height: 500,
-    mt: 0,
     ml: 5,
   },
   '@media (min-width: 425px)': {
@@ -72,21 +48,11 @@ const style = {
     mt: 8,
     ml: 5,
   },
-  '@media (min-width: 600px)': {
-    width: 250,
-    mt: 13,
-    ml: 0,
-  },
   '@media (min-width: 768px)': {
     ml: 0,
     mt: 5.8,
     width: 500,
     height: 600,
-  },
-  '@media (min-width: 800px)': {
-    ml: 0,
-    mt: -7,
-    width: 500,
   },
   '@media (min-width: 1024px)': {
     position: 'absolute' as 'absolute',
@@ -100,23 +66,7 @@ const style = {
     borderRadius: 1,
     boxShadow: 2,
     p: 4,
-    mt: -20,
-    ml: 5,
-  },
-  '@media (min-width: 1280px)': {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 750,
-    height: 510,
-    bgcolor: 'background.paper',
-    border: '2px solid #028be6',
-    borderRadius: 1,
-    boxShadow: 2,
-    p: 4,
-    mt: 5,
-    ml: 5,
+    mt: 0,
   },
   '@media (min-width: 1440px)': {
     position: 'absolute' as 'absolute',
@@ -135,10 +85,6 @@ const style = {
   '@media (min-width: 2560px)': {
     mt: -13,
   },
-  '@media (min-width: 3840px)': {
-    mt: -55,
-  },
-
 
 };
 

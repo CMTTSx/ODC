@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Button, Grid, Paper, styled, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import dayjs, { Dayjs } from 'dayjs';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
@@ -17,8 +17,6 @@ import AgendamentoPopover from '../Layout/AgendamentoPopover'
 const BoxConfig = {
   backgroundColor: '#F6F4F4',
   height: '50rem',
-
- 
 }
 
 const ContentConfig = {
@@ -76,7 +74,6 @@ const TypoAgendamento = {
 }
 
 const TypoName = {
-  ml: -40,
   mt: -5,
   mb: 1.6,
   fontSize: 22,
@@ -95,11 +92,6 @@ const TypoName = {
   },
   '@media (min-width: 1024px) ': {
     ml: -45,
-    mt: -1.7,
-    fontSize: 14,
-  },
-  '@media (min-width: 1280px) ': {
-    ml: -60,
     mt: -1.7,
     fontSize: 14,
   },
@@ -225,13 +217,6 @@ const ButtonConfig = {
   ml: 0,
 }
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
 export default function Agenda() {
 
   var data = new Date();
@@ -250,63 +235,63 @@ export default function Agenda() {
 
   return (
     <Box sx={BoxConfig}>
-    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-      <Grid item xs={20} >
-        <Navbar />
-        <Breadcrumbs />
-      </Grid>
-      <Grid item xs={1} sx={{ zIndex: 1000, }}>
-        <Sidebar />
-      </Grid>
-      <Grid item xs={11}>
-      <Box sx={ContentConfig}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={20} >
+          <Navbar />
+          <Breadcrumbs />
+        </Grid>
+        <Grid item xs={1} sx={{ zIndex: 1000, }}>
+          <Sidebar />
+        </Grid>
+        <Grid item xs={11}>
+          <Box sx={ContentConfig}>
 
-<Typography sx={TypoAgendamento}>
-  Agendamento
-</Typography>
+            <Typography sx={TypoAgendamento}>
+              Agendamento
+            </Typography>
 
-<Box sx={{ display: 'flex', mx: 'auto', mt: 5, }}>
-  <LocalizationProvider dateAdapter={AdapterDayjs}>
-    <Stack spacing={3} width={250} >
-      <DesktopDatePicker
-        label="Data de atendimento"
-        inputFormat="DD/MM/YY"
-        value={value}
-        onChange={handleChange}
-        renderInput={(params) => <TextField {...params} />}
-      ></DesktopDatePicker>
-    </Stack>
-  </LocalizationProvider>
+            <Box sx={{ display: 'flex', mx: 'auto', mt: 5, }}>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <Stack spacing={3} width={250} >
+                  <DesktopDatePicker
+                    label="Data de atendimento"
+                    inputFormat="DD/MM/YY"
+                    value={value}
+                    onChange={handleChange}
+                    renderInput={(params) => <TextField {...params} />}
+                  ></DesktopDatePicker>
+                </Stack>
+              </LocalizationProvider>
 
-</Box>
-<Box
-  sx={BoardConfig}>
+            </Box>
+            <Box
+              sx={BoardConfig}>
 
-  <Typography
-    sx={TypoAgendado}
-  >Agendado </Typography>
+              <Typography
+                sx={TypoAgendado}
+              >Agendado</Typography>
 
-  <Typography
-    sx={TypoHour}
-  >11:00Hrs</Typography>
+              <Typography
+                sx={TypoHour}
+              >11:00Hrs</Typography>
 
-  <Typography
-    sx={TypoName}
-  >Julia Silva Machado
-  </Typography>
+              <Typography
+                sx={TypoName}
+              >Julia Silva Machado
+              </Typography>
 
-  <Box sx={PopoverConfig}><AgendamentoPopover /></Box>
+              <Box sx={PopoverConfig}><AgendamentoPopover /></Box>
 
-</Box>
-<Button sx={ButtonConfig}>
-  <AgendarHorario />
-</Button>
-</Box>
-      </Grid>
-      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+            </Box>
+            <Button sx={ButtonConfig}>
+              <AgendarHorario />
+            </Button>
+          </Box>
+        </Grid>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1 }}>
           VERSÃO DEMONSTRATIVA
-      </Box>
-    </Grid>
-  </Box>
+        </Box>
+      </Grid>
+    </Box>
   );
 }

@@ -28,7 +28,7 @@ const ContentConfig = {
     width: '83%',
   },
   '@media (min-width: 1024px) ': {
-    ml: 19,
+    ml: 5,
   },
   '@media (min-width: 1440px) ': {
     width: '85%',
@@ -102,40 +102,23 @@ const TypoName = {
 const PopoverConfig = {
 
   '@media (min-width: 320px) ': {
-    ml: -80,
-    mt: -0.5,
+    ml: -81,
+    mt: 0.3,
   },
   '@media (min-width: 375px) ': {
     ml: -76,
-    mt: -0.5,
-  },
-  '@media (min-width: 425px) ': {
-    ml: -72,
-    mt: -0.5,
-  },
-  '@media (min-width: 600px) ': {
-    ml: -60,
-    mt: -0.5,
   },
   '@media (min-width: 768px) ': {
     ml: -48,
-    mt: -0.5,
   },
   '@media (min-width: 1024px) ': {
     ml: -52,
-    mt: -0.5,
   },
   '@media (min-width: 1440px) ': {
     ml: -25,
-    mt: 0.4,
-  },
-  '@media (min-width: 1920px) ': {
-    ml: -6,
-    mt: -0.5,
   },
   '@media (min-width: 2560px) ': {
     ml: '-10%',
-    mt: -0.5,
   }
 
 }

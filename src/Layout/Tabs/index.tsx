@@ -63,10 +63,10 @@ const TabsConfig = {
     ml: 37,
   },
   '@media (min-width: 1440px) ': {
-    ml: 74,
+    ml: 70,
   },
   '@media (min-width: 2560px) ': {
-    ml: 158,
+    ml: 157,
   }
 
 }

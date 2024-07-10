@@ -4,6 +4,16 @@ import Button from '@mui/material/Button';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { Box } from '@mui/material';
 
+
+const GerenciamentoPopoverConfig = {
+  ml: '50rem',
+  mt: -9,
+
+  '@media (min-width: 2560px) ': {
+    ml: '42rem',
+  }
+}
+
 export default function BasicPopover() {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
 
@@ -21,10 +31,7 @@ export default function BasicPopover() {
   return (
     <div>
       <Button 
-      sx={{
-        ml: 100,
-        mt: -9,
-      }}
+      sx={GerenciamentoPopoverConfig}
       onClick={handleClick}>
         <BsThreeDotsVertical size={'1.5em'} color={"#000000"} />
       </Button>

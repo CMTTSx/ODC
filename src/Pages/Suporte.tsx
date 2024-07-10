@@ -21,7 +21,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const ContentConfig = {
+const ContainerConfig = {
   overflow: 'hidden',
 
   '@media (min-width: 320px) ': {
@@ -29,7 +29,7 @@ const ContentConfig = {
     width: '80%',
   },
   '@media (min-width: 1024px) ': {
-    ml: 19,
+    ml: 5,
     height: 500,
   },
   '@media (min-width: 1440px) ': {
@@ -38,6 +38,14 @@ const ContentConfig = {
     mt: 1,
   },
 
+}
+
+const ContentConfig = {
+
+  '@media (min-width: 2560px) ': {
+    ml: 10,
+
+  },
 }
 
 const TypoSuporte = {
@@ -360,7 +368,7 @@ const TypoVerificarNovoTicket = {
 
 export default function Suporte() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem' }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '100%' }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
           <Navbar />
@@ -370,23 +378,25 @@ export default function Suporte() {
           <Sidebar />
         </Grid>
         <Grid item xs={11}>
-          <Item sx={ContentConfig}>
+          <Item sx={ContainerConfig}>
 
-            <Typography sx={TypoSuporte}>Bem Vindo ao Centro de Suporte</Typography>
-
-            <Typography sx={TypoSubtitulo}>Para otimizar solicitações de suporte e atendê-lo melhor, utilizamos um sistema de tíquetes de suporte. A cada solicitação é atribuído um número de ticket exclusivo que você pode usar para rastrear o progresso e as respostas online. Para sua referência, forneceremos arquivos completos e histórico de todas as suas solicitações de suporte. É necessário um endereço de email válido para enviar um ticket.</Typography>
-
+          <Typography sx={TypoSuporte}>Bem Vindo ao Centro de Suporte</Typography>
+          <Typography sx={TypoSubtitulo}>Para otimizar solicitações de suporte e atendê-lo melhor, utilizamos um sistema de tíquetes de suporte. A cada solicitação é atribuído um número de ticket exclusivo que você pode usar para rastrear o progresso e as respostas online. Para sua referência, forneceremos arquivos completos e histórico de todas as suas solicitações de suporte. É necessário um endereço de email válido para enviar um ticket.</Typography>
+          
+          <Box  sx={ContentConfig}>
             <Box sx={AdicionarNovoTicketButton}><AdicionarNovoTicketModal /></Box>
             <Typography sx={TypoNovoTicket}>Por gentileza, detalhe o máximo possível para que possamos atende-lo melhor. Para consultar um ticket feito anteriormente, faça o login.
             </Typography>
 
             <Box sx={VerificarTicketButton}><VerificarNovoTicketModal /></Box>
-            <Typography sx={TypoVerificarNovoTicket}> Clique para Verificar os Tickets enviados!
+            <Typography sx={TypoVerificarNovoTicket}>Clique para Verificar os Tickets enviados!
             </Typography>
 
+          </Box>
+           
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1, pb: 15.2}}>
           VERSÃO DEMONSTRATIVA
         </Box>
       </Grid>

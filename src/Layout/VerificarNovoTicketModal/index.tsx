@@ -44,8 +44,8 @@ const style = {
     width: 400,
   },
   '@media (min-width: 1024px)': {
-    ml: 5,
-    mt: -38,
+    ml: 0,
+    mt: 0,
   },
   '@media (min-width: 1280px)': {
     ml: 5,

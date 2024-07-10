@@ -31,7 +31,7 @@ const ContentConfig = {
     overflowX: 'hidden',
   },
   '@media (min-width: 1024px) ': {
-    ml: 19,
+    ml: 5,
     overflowX: 'hidden',
   },
   '@media (min-width: 1440px) ': {

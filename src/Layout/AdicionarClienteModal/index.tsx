@@ -17,7 +17,8 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 750,
   bgcolor: 'background.paper',
-  border: '2px solid #028be6',
+  border: '2px solid ',
+  borderColor: '#028be6',
   borderRadius: 1,
   boxShadow: 2,
   p: 4,
@@ -81,27 +82,11 @@ const style = {
     width: 750,
     height: 630,
     bgcolor: 'background.paper',
-    border: '2px solid #028be6',
     borderRadius: 1,
     boxShadow: 2,
     p: 4,
-    mt: -20,
-    ml: 5,
-  },
-  '@media (min-width: 1280px)': {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 750,
-    height: 510,
-    bgcolor: 'background.paper',
-    border: '2px solid #028be6',
-    borderRadius: 1,
-    boxShadow: 2,
-    p: 4,
-    mt: 5,
-    ml: 5,
+    mt: 0,
+    ml: 0,
   },
   '@media (min-width: 1440px)': {
     position: 'absolute' as 'absolute',
@@ -111,17 +96,14 @@ const style = {
     width: 750,
     height: 580,
     bgcolor: 'background.paper',
-    border: '2px solid #028be6',
     borderRadius: 1,
     boxShadow: 2,
     p: 4,
     mt: 5,
+    ml: -5,
   },
   '@media (min-width: 2560px)': {
     mt: -13,
-  },
-  '@media (min-width: 3840px)': {
-    mt: -55,
   },
 
 };
@@ -437,9 +419,6 @@ export default function BasicModal() {
 
 
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
-  };
 
   return (
     <div>
@@ -482,8 +461,6 @@ export default function BasicModal() {
             required
             label="CPF"
             sx={cpfConfig}
-            type='number'
-            
           />
 
           <TextField
@@ -498,7 +475,6 @@ export default function BasicModal() {
               <InputLabel id="demo-simple-select-label">Sexo</InputLabel>
               <Select
                 label="Sexo"
-                onChange={handleChange}
               >
                 <MenuItem value={'M'}>Masculino</MenuItem>
                 <MenuItem value={'F'}>Feminino</MenuItem>
@@ -518,7 +494,6 @@ export default function BasicModal() {
               <InputLabel id="demo-simple-select-label">Estado Civil</InputLabel>
               <Select
                 label="Estado Civil"
-                onChange={handleChange}
               >
                 <MenuItem value={'S'}>Solteiro</MenuItem>
                 <MenuItem value={'C'}>Casado</MenuItem>
@@ -555,7 +530,6 @@ export default function BasicModal() {
               <Select
                 value={estado}
                 label="Estado"
-                onChange={handleChange}
               >
                 <MenuItem value={'E'}>Estado</MenuItem>
 
@@ -569,7 +543,6 @@ export default function BasicModal() {
               <Select
                 value={cidade}
                 label="Cidade"
-                onChange={handleChange}
               >
                 <MenuItem value={'C'}>Cidade</MenuItem>
 

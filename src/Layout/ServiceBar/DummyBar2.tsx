@@ -11,7 +11,6 @@ const BoxConfig = {
   backgroundColor: '#fff',
 
   '@media (min-width: 320px)': {
-    maxHeight: 400,
     height: 120,
     ml: '-8%',
     width: '14rem',
@@ -37,13 +36,12 @@ const BoxConfig = {
     height: '3.5em',
   },
   '@media (min-width: 1440px)': {
-    width: 940,
-    maxHeight: 60,
+    width: '56.5rem',
     ml: '-2%',
   },
   '@media (min-width: 2560px)': {
-    width: 1630,
-    maxHeight: 60,
+    width: '100%',
+    ml: 0,
   },
 
 }
@@ -100,7 +98,8 @@ const BoxDateHour = {
     ml: 0,
   },
   '@media (min-width: 2560px)': {
-    ml: -260,
+    ml: -415,
+    mt: 1,
   },
 
 }
@@ -167,13 +166,12 @@ const TypoAge = {
     ml: 22,
     mt: -2,
   },
-
 }
 
 const TypoDateHour = {
 
   '@media (min-width: 320px)': {
-    ml: '1.5em',
+    ml: '2.5em',
     mt: 1,
     fontSize: 12,
   },
@@ -203,7 +201,7 @@ const TypoDateHour = {
   },
   '@media (min-width: 2560px)': {
     ml: '40%',
-    mt: -3,
+    mt: -2.5,
   },
 }
 
@@ -214,7 +212,7 @@ const TypoStatus = {
   fontWeight: 600,
 
   '@media (min-width: 320px)': {
-    ml: 2,
+    ml: 1.8,
   },
   '@media (min-width: 375px)': {
     ml: 5,
@@ -231,10 +229,9 @@ const TypoStatus = {
     mt: -5,
   },
   '@media (min-width: 2560px)': {
-    ml: 417.5,
-    mt: -3,
+    ml: 570,
+    mt: -4.5,
   },
-
 }
 
 

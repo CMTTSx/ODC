@@ -28,12 +28,12 @@ const BoxConfig = {
     mt: -5.2,
   },
   '@media (min-width: 1440px)': {
-    ml: 106,
+    ml: 103,
     mt: -3.5,
   },
   '@media (min-width: 2560px)': {
-    ml: 190,
-    mt: -4,
+    ml: 185,
+    mt: -5,
   },
 
 }
