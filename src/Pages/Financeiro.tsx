@@ -138,9 +138,9 @@ export default function Financeiro() {
             </Box>
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
           VERSÃO DEMONSTRATIVA
-      </Box>
+        </Box>
       </Grid>
     </Box>
   );

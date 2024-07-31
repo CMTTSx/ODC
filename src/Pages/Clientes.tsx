@@ -22,22 +22,27 @@ const Item = styled(Paper)(({ theme }) => ({
 const ContentConfig = {
 
   '@media (min-width: 320px) ': {
-    ml: 5,
+    ml: '14.5%',
     width: '80%',
     overflow: 'hidden',
   },
+  '@media (min-width: 375px) ': {
+    ml: '13%',
+  },
+  '@media (min-width: 768px) ': {
+    ml: '7%',
+  },
   '@media (min-width: 1024px) ': {
-    ml: 8,
+    ml: '7%',
   },
   '@media (min-width: 1440px) ': {
     width: '60rem',
-    ml: 18,
+    ml: '8%',
     mt: 10,
   },
   '@media (min-width: 2560px) ': {
-    ml: '35rem',
+    ml: '20%',
   },
-
 
 }
 
@@ -109,9 +114,9 @@ export default function Clientes() {
             <Button sx={ButtonAddConfig}><AdicionarCliente /> </Button>
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1}}>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
           VERSÃO DEMONSTRATIVA
-      </Box>
+        </Box>
       </Grid>
     </Box>
   );

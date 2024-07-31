@@ -22,12 +22,28 @@ const BoxConfig = {
 const ContentConfig = {
 
   '@media (min-width: 320px) ': {
-    ml: 5,
+    ml: '15%',
+    mr: 'auto',
     mt: 0,
     width: '84%',
     textAlign: 'center',
     borderColor: '#E5E5E5',
     backgroundColor: '#fff',
+  },
+  '@media (min-width: 375px) ': {
+    ml: '13%',
+  },
+  '@media (min-width: 425px) ': {
+    ml: '11%',
+  },
+  '@media (min-width: 768px) ': {
+    ml: '5%',
+  },
+  '@media (min-width: 1024px) ': {
+    ml: '5%',
+  },
+  '@media (min-width: 1440px) ': {
+    ml: '3%',
   },
 }
 
@@ -58,7 +74,6 @@ const BoardConfig = {
 }
 
 const TypoAgendamento = {
-  zIndex: 1,
   mt: 2,
   mx: 'auto',
   fontSize: 35,
@@ -125,7 +140,7 @@ const TypoAgendado = {
     fontSize: 12,
   },
   '@media (min-width: 768px) ': {
-    ml: 10,
+    ml: 30,
     mt: 1.8,
     fontSize: 12,
   },
@@ -154,14 +169,14 @@ const TypoHour = {
 
   '@media (min-width: 320px) ': {
     ml: -21,
-    mt: -4,
+    mt: -4.5,
     fontSize: 12.5,
   },
   '@media (min-width: 375px) ': {
     ml: -25.5,
   },
   '@media (min-width: 768px) ': {
-    ml: -18,
+    ml: 0,
     mt: -2.2,
   },
   '@media (min-width: 1024px) ': {
@@ -250,9 +265,9 @@ export default function Agenda() {
               Agendamento
             </Typography>
 
-            <Box sx={{ display: 'flex', mx: 'auto', mt: 5, }}>
+            <Box sx={{ display: 'flex', mx: 'auto', mt: 5 }}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <Stack spacing={3} width={250} >
+                <Stack spacing={3} width={'11rem'} >
                   <DesktopDatePicker
                     label="Data de atendimento"
                     inputFormat="DD/MM/YY"
@@ -288,7 +303,7 @@ export default function Agenda() {
             </Button>
           </Box>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1 }}>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
           VERSÃO DEMONSTRATIVA
         </Box>
       </Grid>

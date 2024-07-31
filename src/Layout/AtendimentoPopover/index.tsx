@@ -8,32 +8,29 @@ import { Box } from '@mui/material';
 const BoxConfig = {
 
   '@media (min-width: 320px)': {
-    ml: 20,
+    ml: '70%',
     mt: -8,
   },
-  '@media (min-width: 375px)': {
-    ml: 26,
-    mt: -8,
-  },
+
   '@media (min-width: 425px)': {
-    ml: 32,
+    ml: '80%',
     mt: -8.5,
   },
   '@media (min-width: 768px)': {
-    ml: 58,
+    ml: '87%',
     mt: -3.7,
   },
   '@media (min-width: 1024px)': {
-    ml: 70,
-    mt: -5.2,
+    ml: '88%',
+    mt: -3.5,
   },
   '@media (min-width: 1440px)': {
-    ml: 103,
+    ml: '90%',
     mt: -3.5,
   },
   '@media (min-width: 2560px)': {
     ml: 185,
-    mt: -5,
+    mt: -3.5,
   },
 
 }

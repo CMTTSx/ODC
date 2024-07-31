@@ -46,9 +46,8 @@ function a11yProps(index: number) {
 
 //Configurar TOPTAB ATENDIMENTO || FINALIZADO || TODOS
 const TabsConfig = {
-  
+
   '@media (min-width: 320px) ': {
-    zIndex: 1,
   },
   '@media (min-width: 375px) ': {
     ml: '2rem',
@@ -57,16 +56,16 @@ const TabsConfig = {
     ml: '3rem',
   },
   '@media (min-width: 768px) ': {
-    ml: 23,
+    ml: '11rem',
   },
   '@media (min-width: 1024px) ': {
-    ml: 37,
+    ml: '47%',
   },
   '@media (min-width: 1440px) ': {
-    ml: 70,
+    ml: '60%',
   },
   '@media (min-width: 2560px) ': {
-    ml: 157,
+    ml: '75%',
   }
 
 }
@@ -77,8 +76,9 @@ const BoxConfig = {
   mb: 10,
   zIndex: 1,
 
+
   '@media (min-width: 320px) ': {
-    ml: 4.8,
+    ml: '2.4em',
   },
   '@media (min-width: 375px) ': {
     ml: 4,
@@ -96,12 +96,10 @@ const BoxConfig = {
   },
   '@media (min-width: 1440px) ': {
     ml: 18,
-    width: '69.3%',
   },
   '@media (min-width: 2560px) ': {
     ml: 25.5,
     mt: 10,
-    width: '69.5%',
   },
 
 }
@@ -111,13 +109,13 @@ const ButtonConfig = {
 
   '@media (min-width: 320px) ': {
     mt: '1rem',
-    ml: '1rem',
+    ml: '0%',
   },
   '@media (min-width: 375px) ': {
     ml: '1.3rem',
   },
   '@media (min-width: 425px) ': {
-    ml: '3rem',
+    ml: '18%',
   },
   '@media (min-width: 768px) ': {
     ml: '8rem',
@@ -126,7 +124,7 @@ const ButtonConfig = {
     ml: '11rem',
   },
   '@media (min-width: 1440px) ': {
-    ml: '21.4rem',
+    ml: '35%',
   },
   '@media (min-width: 2560px) ': {
     ml: '43rem',
@@ -139,11 +137,8 @@ const Tab1Config = {
   ml: 55,
 
   '@media (min-width: 320px) ': {
-    ml: 2,
-  },
-  '@media (min-width: 375px) ': {
-    ml: 1,
-  },
+    ml: '5%',
+  },  
 
 }
 
@@ -216,7 +211,7 @@ export default function BasicTabs() {
         <Box sx={{
         }}>
           <Box sx={{
-        }}>
+          }}>
             <ServiceBar />
           </Box>
           <Dummybar />

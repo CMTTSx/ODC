@@ -25,11 +25,14 @@ const ContainerConfig = {
   overflow: 'hidden',
 
   '@media (min-width: 320px) ': {
-    ml: 3.8,
+    ml: '13%',
     width: '80%',
   },
+  '@media (min-width: 768px) ': {
+    ml: '8.5%',
+  },
   '@media (min-width: 1024px) ': {
-    ml: 5,
+    ml: '8%',
     height: 500,
   },
   '@media (min-width: 1440px) ': {
@@ -396,7 +399,7 @@ export default function Suporte() {
            
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: '100%', ml: 1, pb: 15.2}}>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, pb: 5 }}>
           VERSÃO DEMONSTRATIVA
         </Box>
       </Grid>

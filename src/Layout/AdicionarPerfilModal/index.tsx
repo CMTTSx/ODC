@@ -9,6 +9,7 @@ import InputLabel from '@mui/material/InputLabel';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { FormControl } from '@mui/material';
+import { IMaskInput } from "react-imask";
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -29,8 +30,8 @@ const style = {
     overflowY: 'auto',
     width: 170,
     height: 500,
-    mt: 8,
-    ml: 5,
+    mt: 2,
+    ml: 4,
   },
   '@media (min-width: 375px)': {
     display: 'flex',
@@ -193,14 +194,13 @@ const estadoCivilConfig = {
   },
   '@media (min-width: 768px)': {
     width: '45%',
-    mt: -15,
-    ml: 34.5,
+    mt: -14.3,
+    ml: 34.3,
   },
   '@media (min-width: 1024px)': {
-    width: '50%',
-    mt: 1,
-    mb: 5,
-    ml: 0,
+    width: '48%',
+    mt: -14.3,
+    ml: 48,
   },
 }
 
@@ -231,13 +231,7 @@ const EnderecoConfig = {
     mt: -2,
   },
   '@media (min-width: 768px)': {
-    mt: 10,
-  },
-  '@media (min-width: 1024px)': {
-    mt: -2.5,
-  },
-  '@media (min-width: 1440px)': {
-    mt: -2,
+    mt: 5,
   },
 
 }
@@ -432,30 +426,33 @@ export default function BasicModal() {
             Adicionar Perfil
           </Typography>
 
-          <Typography sx={{mt: 2, mb: 1}}>Dados Pessoais</Typography>
+          <Typography sx={{ mt: 2, mb: 1 }}>Dados Pessoais</Typography>
 
 
           <TextField
             required
             label="Nome Completo"
             fullWidth={true}
+            inputProps={{ maxLength: 80 }}
             sx={{
               mt: 1,
             }}
           />
 
-          <TextField
-            required
-            label="CPF"
-            sx={cpfConfig}
-            value={setCpf}
+          <IMaskInput
+            mask="000.000.000-00"
+            placeholder="Seu CPF"
+            style={{
+              fontSize: 16,
+              marginTop: '1rem',
+              padding: 15,
+            }}
           />
 
           <TextField
             required
             sx={dataConfig}
             type="date"
-            value={setAge}
           />
 
           <Box sx={sexoConfig}>
@@ -471,12 +468,15 @@ export default function BasicModal() {
             </FormControl>
           </Box>
 
-          <TextField
-            required
-            label="Telefone"
-            sx={telefoneConfig}
+          <IMaskInput
+            mask="(00) 00000-0000"
+            placeholder="Número de telefone"
+            style={{
+              marginTop: 10,
+              padding: 14,
+              fontSize: 14,
+            }}
           />
-
           <Box sx={estadoCivilConfig}>
             <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Estado Civil</InputLabel>
@@ -544,9 +544,9 @@ export default function BasicModal() {
           </Box>
 
 
-          <Typography sx={{mt: 2,}}>Perfil</Typography>
+          <Typography sx={{ mt: 2, }}>Perfil</Typography>
 
-          <Box sx={{mt: 2, mb: 2}}>
+          <Box sx={{ mt: 2, mb: 2 }}>
             <FormControl fullWidth={true}>
               <InputLabel id="demo-simple-select-label">Perfil de Usuário</InputLabel>
               <Select

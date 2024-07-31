@@ -65,7 +65,7 @@ const ButtonConfig = {
     ml: 22.5,
   },
   '@media (min-width: 1440px)': {
-    ml: 43,
+    ml: '60%',
   },
   '@media (min-width: 2560px)': {
     ml: 23,
@@ -171,7 +171,8 @@ export default function BasicModal() {
           <Box sx={{
             mt: 2,
           }}>
-          <TextField id="outlined-basic" label="Digite o nome do paciente" variant="outlined" fullWidth={true} />
+          <TextField id="outlined-basic" label="Digite o nome do paciente" variant="outlined" fullWidth={true} inputProps={{ maxLength: 80 }}
+ />
           </Box>
          
           <Box sx={ButtonConfig}>

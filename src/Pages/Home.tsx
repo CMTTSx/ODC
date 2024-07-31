@@ -35,7 +35,7 @@ export default function Home() {
           <TopBar />
           <Tabs />
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 5, }}>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
           VERSÃO DEMONSTRATIVA
         </Box>
       </Grid>

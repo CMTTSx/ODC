@@ -9,6 +9,8 @@ import InputLabel from '@mui/material/InputLabel';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { FormControl } from '@mui/material';
+import { IMaskInput } from "react-imask";
+
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -68,11 +70,6 @@ const style = {
     mt: 5.8,
     width: 500,
     height: 600,
-  },
-  '@media (min-width: 800px)': {
-    ml: 0,
-    mt: -7,
-    width: 500,
   },
   '@media (min-width: 1024px)': {
     position: 'absolute' as 'absolute',
@@ -193,7 +190,7 @@ const sexoConfig = {
 const estadoCivilConfig = {
   width: 234,
   mt: -7,
-  mb: 5,
+  mb: 2,
   ml: 34,
 
   '@media (min-width: 320px)': {
@@ -213,27 +210,13 @@ const estadoCivilConfig = {
   },
   '@media (min-width: 768px)': {
     width: '45%',
-    mt: -15,
+    mt: -7,
     ml: 34.5,
   },
   '@media (min-width: 1024px)': {
-    width: '50%',
-    mt: 1,
-    mb: 5,
-    ml: 0,
-  },
-}
-
-const telefoneConfig = {
-  mt: 1,
-
-  '@media (min-width: 768px)': {
-    width: '50%',
-  },
-  '@media (min-width: 1024px)': {
-    width: '48%',
+    width: '46.6%',
     mt: -7,
-    ml: 48,
+    ml: 49,
   },
 }
 
@@ -242,22 +225,13 @@ const EnderecoConfig = {
   mb: 1,
 
   '@media (min-width: 320px)': {
-    mt: -2,
-  },
-  '@media (min-width: 375px)': {
-    mt: -2,
-  },
-  '@media (min-width: 425px)': {
-    mt: -2,
-  },
-  '@media (min-width: 768px)': {
-    mt: 10,
+    mt: 2,
   },
   '@media (min-width: 1024px)': {
-    mt: -2.5,
+    mt: 2,
   },
   '@media (min-width: 1440px)': {
-    mt: -2,
+    mt: 2,
   },
 
 }
@@ -321,7 +295,7 @@ const complementoConfig = {
 
 const estadoConfig = {
   width: 234,
-  mt: 2,
+  mt: 1,
 
   '@media (min-width: 320px)': {
     width: '100%',
@@ -417,9 +391,6 @@ export default function BasicModal() {
   const [recepcionista, setRecepcionista] = React.useState('');
   const [odontologo, setOdontologo] = React.useState('');
 
-
-
-
   return (
     <div>
       <Button onClick={handleOpen} sx={{
@@ -446,28 +417,32 @@ export default function BasicModal() {
             Adicionar Cliente
           </Typography>
 
-          <Typography sx={{mt: 2, mb: 1}}>Dados Pessoais</Typography>
+          <Typography sx={{ mt: 2, mb: 1 }}>Dados Pessoais</Typography>
 
           <TextField
             required
             label="Nome Completo"
             fullWidth={true}
+            inputProps={{ maxLength: 80 }}
             sx={{
               mt: 1,
             }}
           />
 
-          <TextField
-            required
-            label="CPF"
-            sx={cpfConfig}
+          <IMaskInput
+            mask="000.000.000-00"
+            placeholder="Digite seu CPF"
+            style={{
+              fontSize: 16,
+              marginTop: '1rem',
+              padding: 15,
+            }}
           />
 
           <TextField
             required
             sx={dataConfig}
             type="date"
-            value={setAge}
           />
 
           <Box sx={sexoConfig}>
@@ -481,13 +456,6 @@ export default function BasicModal() {
               </Select>
             </FormControl>
           </Box>
-
-          <TextField
-            required
-            label="Telefone"
-            sx={telefoneConfig}
-            type='number'
-          />
 
           <Box sx={estadoCivilConfig}>
             <FormControl fullWidth>
@@ -503,6 +471,16 @@ export default function BasicModal() {
               </Select>
             </FormControl>
           </Box>
+
+          <IMaskInput
+            mask="(00) 00000-0000"
+            placeholder="Digite seu número de telefone"
+            style={{
+              marginTop: 0,
+              padding: 14,
+              fontSize: 14,
+            }}
+          />
 
           <Typography sx={EnderecoConfig}>Endereço</Typography>
 

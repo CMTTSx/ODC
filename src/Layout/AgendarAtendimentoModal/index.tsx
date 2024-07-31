@@ -76,7 +76,7 @@ const AgendarButtonConfig = {
     backgroundColor: '#05e340'
   },
   '@media (min-width: 320px)': {
-    ml: -26,
+    ml: -25,
     mt: -5,
   },
   '@media (min-width: 360px)': {
@@ -214,7 +214,7 @@ export default function BasicModal() {
             mt: 3,
           }}>
 
-          <TextField id="outlined-basic" label="Digite o nome do paciente" variant="outlined" fullWidth={true} />
+          <TextField id="outlined-basic" label="Digite o nome do paciente" variant="outlined" fullWidth={true} inputProps={{ maxLength: 80 }} />
           
           
           <Box sx={{
