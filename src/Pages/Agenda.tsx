@@ -303,10 +303,10 @@ export default function Agenda() {
             </Button>
           </Box>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, pt: 10, }}>
-          VERSÃO DEMONSTRATIVA
-        </Box>
       </Grid>
+      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, pt: 10, }}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
     </Box>
   );
 }

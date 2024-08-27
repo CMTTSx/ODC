@@ -125,10 +125,10 @@ const ButtonConfig = {
     ml: '11rem',
   },
   '@media (min-width: 1440px) ': {
-    ml: '35%',
+    ml: '37.5%',
   },
   '@media (min-width: 2560px) ': {
-    ml: '44%',
+    ml: '43.5%',
 
   },
 
@@ -195,6 +195,9 @@ export default function BasicTabs() {
           <Dummybar />
         </Box>
         <Button sx={ButtonConfig}><AtendimentoModal /></Button>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', pt: 10  }}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
       </TabPanel>
       {/*Tabs 2*/}
       <TabPanel value={value} index={1}>

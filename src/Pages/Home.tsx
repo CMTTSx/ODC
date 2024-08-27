@@ -11,7 +11,7 @@ const BoxConfig = {
   backgroundColor: '#F6F4F4',
 
   '@media (min-width: 320px) ': {
-    height: '50rem',
+    height: '60rem',
   },
   '@media (min-width: 2560px) ': {
     height: '100rem'
@@ -33,12 +33,10 @@ export default function Home() {
         <Grid item xs={11}>
           <TopBar />
           <Tabs />
-          
         </Grid>
+        
       </Grid>
-      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', ml: '-8%'  }}>
-          VERSÃO DEMONSTRATIVA
-        </Box>
+      
     </Box>
   );
 }
