@@ -129,6 +129,7 @@ const ButtonConfig = {
   },
   '@media (min-width: 2560px) ': {
     ml: '43.5%',
+    width: '13%'
 
   },
 
