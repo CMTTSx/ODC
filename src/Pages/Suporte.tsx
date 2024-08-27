@@ -1,16 +1,15 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
 
 //Import Components
+import { Typography } from '@mui/material';
+import AdicionarNovoTicketModal from '../Layout/AdicionarNovoTicketModal';
+import Breadcrumbs from '../Layout/Breadcrumbs/Suporte';
 import Navbar from '../Layout/Navbar';
 import Sidebar from '../Layout/Sidebar';
-import Breadcrumbs from '../Layout/Breadcrumbs/Suporte';
-import AdicionarNovoTicketModal from '../Layout/AdicionarNovoTicketModal';
 import VerificarNovoTicketModal from '../Layout/VerificarNovoTicketModal';
-import { Typography } from '@mui/material';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -40,14 +39,25 @@ const ContainerConfig = {
     ml: 5,
     mt: 1,
   },
+  '@media (min-width: 2560px) ': {
+    width: '85%',
+    ml: '0%',
+    mt: 1,
+  },
+  '@media (min-width: 3840px) ': {
+    width: '55%',
+    ml: '16.5%',
+    mt: 1,
+  },
 
 }
 
+//Content Config
 const ContentConfig = {
 
   '@media (min-width: 2560px) ': {
-    ml: 10,
-
+    ml: 15,
+    width: '80%',
   },
 }
 
@@ -383,26 +393,26 @@ export default function Suporte() {
         <Grid item xs={11}>
           <Item sx={ContainerConfig}>
 
-          <Typography sx={TypoSuporte}>Bem Vindo ao Centro de Suporte</Typography>
-          <Typography sx={TypoSubtitulo}>Para otimizar solicitações de suporte e atendê-lo melhor, utilizamos um sistema de tíquetes de suporte. A cada solicitação é atribuído um número de ticket exclusivo que você pode usar para rastrear o progresso e as respostas online. Para sua referência, forneceremos arquivos completos e histórico de todas as suas solicitações de suporte. É necessário um endereço de email válido para enviar um ticket.</Typography>
-          
-          <Box  sx={ContentConfig}>
-            <Box sx={AdicionarNovoTicketButton}><AdicionarNovoTicketModal /></Box>
-            <Typography sx={TypoNovoTicket}>Por gentileza, detalhe o máximo possível para que possamos atende-lo melhor. Para consultar um ticket feito anteriormente, faça o login.
-            </Typography>
+            <Typography sx={TypoSuporte}>Bem Vindo ao Centro de Suporte</Typography>
+            <Typography sx={TypoSubtitulo}>Para otimizar solicitações de suporte e atendê-lo melhor, utilizamos um sistema de tíquetes de suporte. A cada solicitação é atribuído um número de ticket exclusivo que você pode usar para rastrear o progresso e as respostas online. Para sua referência, forneceremos arquivos completos e histórico de todas as suas solicitações de suporte. É necessário um endereço de email válido para enviar um ticket.</Typography>
 
-            <Box sx={VerificarTicketButton}><VerificarNovoTicketModal /></Box>
-            <Typography sx={TypoVerificarNovoTicket}>Clique para Verificar os Tickets enviados!
-            </Typography>
+            <Box sx={ContentConfig}>
+              <Box sx={AdicionarNovoTicketButton}><AdicionarNovoTicketModal /></Box>
+              <Typography sx={TypoNovoTicket}>Por gentileza, detalhe o máximo possível para que possamos atende-lo melhor. Para consultar um ticket feito anteriormente, faça o login.
+              </Typography>
 
-          </Box>
-           
+              <Box sx={VerificarTicketButton}><VerificarNovoTicketModal /></Box>
+              <Typography sx={TypoVerificarNovoTicket}>Clique para Verificar os Tickets enviados!
+              </Typography>
+
+            </Box>
+
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, pb: 5 }}>
-          VERSÃO DEMONSTRATIVA
-        </Box>
       </Grid>
+      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, pt: 10, pb: 5 }}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
     </Box>
   );
 }

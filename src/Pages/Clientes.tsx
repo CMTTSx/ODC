@@ -1,15 +1,14 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import { Button, TextField, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import { Button, TextField, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-import Navbar from '../Layout/Navbar';
-import Breadcrumbs from '../Layout/Breadcrumbs/Clientes';
-import Sidebar from '../Layout/Sidebar';
-import AdicionarCliente from '../Layout/AdicionarClienteModal';
 import { BsSearch } from 'react-icons/bs';
+import AdicionarCliente from '../Layout/AdicionarClienteModal';
+import Breadcrumbs from '../Layout/Breadcrumbs/Clientes';
+import Navbar from '../Layout/Navbar';
+import Sidebar from '../Layout/Sidebar';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -41,7 +40,9 @@ const ContentConfig = {
     mt: 10,
   },
   '@media (min-width: 2560px) ': {
-    ml: '20%',
+    width: '40%',
+    ml: '24.5%',
+    mr: 'auto',
   },
 
 }
@@ -88,7 +89,7 @@ const ButtonAddConfig = {
 
 export default function Clientes() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem', }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem', width: 1, }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
           <Navbar />
@@ -114,10 +115,10 @@ export default function Clientes() {
             <Button sx={ButtonAddConfig}><AdicionarCliente /> </Button>
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
-          VERSÃO DEMONSTRATIVA
-        </Box>
       </Grid>
+      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, pt: 10, }}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
     </Box>
   );
 }

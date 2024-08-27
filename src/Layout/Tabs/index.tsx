@@ -1,15 +1,15 @@
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
+import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
+import AtendimentoModal from '../AdicionarAtendimentoModal';
 import ServiceBar from '../ServiceBar';
 import Dummybar from '../ServiceBar/DummyBar';
 import Dummybar2 from '../ServiceBar/DummyBar2';
 import Dummybar3 from '../ServiceBar/DummyBar3';
 import Dummybar4 from '../ServiceBar/DummyBar4';
-import AtendimentoModal from '../AdicionarAtendimentoModal';
-import { Button } from '@mui/material';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -98,8 +98,9 @@ const BoxConfig = {
     ml: 18,
   },
   '@media (min-width: 2560px) ': {
-    ml: 25.5,
+    ml: 21,
     mt: 10,
+    width: '75%',
   },
 
 }
@@ -127,7 +128,8 @@ const ButtonConfig = {
     ml: '35%',
   },
   '@media (min-width: 2560px) ': {
-    ml: '43rem',
+    ml: '44%',
+
   },
 
 }

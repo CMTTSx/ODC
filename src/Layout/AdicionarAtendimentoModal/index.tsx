@@ -1,9 +1,9 @@
-import * as React from 'react';
+import { TextField } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { TextField } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -47,11 +47,11 @@ const style = {
     width: '40%',
   },
   '@media (min-width: 2560px) ': {
-    mt: -30,
+    mt: '-10%',
     ml: -10,
     width: '30%',
   },
-  
+
 };
 
 const ButtonConfig = {
@@ -68,7 +68,7 @@ const ButtonConfig = {
     ml: '60%',
   },
   '@media (min-width: 2560px)': {
-    ml: 23,
+    ml: '70%',
   },
 
 }
@@ -99,11 +99,6 @@ const AdicionarConfig = {
     ml: 4,
     mr: -5,
   },
-  '@media (min-width: 2560px)': {
-    ml: '24rem',
-    mr: -5,
-  },
-
 }
 
 const CancelarConfig = {
@@ -132,7 +127,7 @@ const CancelarConfig = {
     mt: -0.1,
     ml: 6,
   },
-  
+
 }
 
 export default function BasicModal() {
@@ -165,21 +160,21 @@ export default function BasicModal() {
             textAlign: 'center',
             ml: 0
           }}>
-          Adicionar Atendimento
+            Adicionar Atendimento
           </Typography>
 
           <Box sx={{
             mt: 2,
           }}>
-          <TextField id="outlined-basic" label="Digite o nome do paciente" variant="outlined" fullWidth={true} inputProps={{ maxLength: 80 }}
- />
+            <TextField id="outlined-basic" label="Digite o nome do paciente" variant="outlined" fullWidth={true} inputProps={{ maxLength: 80 }}
+            />
           </Box>
-         
+
           <Box sx={ButtonConfig}>
-          <Button sx={AdicionarConfig}>Adicionar</Button>
-          <Button
-          onClick={handleClose}
-          sx={CancelarConfig}>Cancelar</Button>
+            <Button sx={AdicionarConfig}>Adicionar</Button>
+            <Button
+              onClick={handleClose}
+              sx={CancelarConfig}>Cancelar</Button>
           </Box>
         </Box>
       </Modal>

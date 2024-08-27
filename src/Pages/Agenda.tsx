@@ -1,18 +1,18 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
 import { Button, Grid, Typography } from '@mui/material';
-import dayjs, { Dayjs } from 'dayjs';
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import dayjs, { Dayjs } from 'dayjs';
+import * as React from 'react';
 
+import AgendamentoPopover from '../Layout/AgendamentoPopover';
+import AgendarHorario from '../Layout/AgendarAtendimentoModal';
+import Breadcrumbs from '../Layout/Breadcrumbs/Agenda';
 import Navbar from '../Layout/Navbar';
-import Breadcrumbs from '../Layout/Breadcrumbs/Agenda'
 import Sidebar from '../Layout/Sidebar';
-import AgendarHorario from '../Layout/AgendarAtendimentoModal'
-import AgendamentoPopover from '../Layout/AgendamentoPopover'
 
 const BoxConfig = {
   backgroundColor: '#F6F4F4',
@@ -303,7 +303,7 @@ export default function Agenda() {
             </Button>
           </Box>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
+        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, pt: 10, }}>
           VERSÃO DEMONSTRATIVA
         </Box>
       </Grid>

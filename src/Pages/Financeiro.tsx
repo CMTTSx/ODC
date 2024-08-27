@@ -1,17 +1,16 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import { Button, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import { Button, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-import Navbar from '../Layout/Navbar';
 import Breadcrumbs from '../Layout/Breadcrumbs/Financeiro';
+import Navbar from '../Layout/Navbar';
 import Sidebar from '../Layout/Sidebar';
 
-import EntradaSaida from '../assets/entradaSaida.png'
-import Boleto from '../../src/assets/Boleto.webp'
+import Boleto from '../../src/assets/Boleto.webp';
 import nfe from '../../src/assets/icon-nfe.png';
+import EntradaSaida from '../assets/entradaSaida.png';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -36,6 +35,10 @@ const ContentConfig = {
   },
   '@media (min-width: 1440px) ': {
     width: '75%',
+    ml: 13,
+  },
+  '@media (min-width: 2560px) ': {
+    width: '80%',
     ml: 13,
   },
 
@@ -138,10 +141,10 @@ export default function Financeiro() {
             </Box>
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
-          VERSÃO DEMONSTRATIVA
-        </Box>
       </Grid>
+      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, pt: 10, }}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
     </Box>
   );
 }

@@ -1,12 +1,11 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
 import { Grid, } from '@mui/material';
+import Box from '@mui/material/Box';
 
+import Breadcrumbs from '../Layout/Breadcrumbs/Home';
 import Navbar from '../Layout/Navbar';
-import Breadcrumbs from '../Layout/Breadcrumbs/Home'
 import Sidebar from '../Layout/Sidebar';
-import TopBar from '../Layout/Topbar';
 import Tabs from '../Layout/Tabs';
+import TopBar from '../Layout/Topbar';
 
 const BoxConfig = {
   backgroundColor: '#F6F4F4',
@@ -34,11 +33,12 @@ export default function Home() {
         <Grid item xs={11}>
           <TopBar />
           <Tabs />
+          
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
+      </Grid>
+      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', ml: '-8%'  }}>
           VERSÃO DEMONSTRATIVA
         </Box>
-      </Grid>
     </Box>
   );
 }

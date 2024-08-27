@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Typography } from '@mui/material'
 
 
@@ -38,8 +37,8 @@ const BoxConfig = {
     ml: 18
   },
   '@media (min-width: 2560px) ': {
-    ml: 25,
-    width: '70%',
+    ml: 23,
+    width: '74%',
   },
 
 }

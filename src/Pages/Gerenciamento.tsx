@@ -1,15 +1,14 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import { Button, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import { Button, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-import Navbar from '../Layout/Navbar';
-import Breadcrumbs from '../Layout/Breadcrumbs/Gerenciamento';
-import Sidebar from '../Layout/Sidebar';
-import GerenciamentoPopover from '../Layout/GerenciamentoPopover';
 import AdicionarPerfilModal from '../Layout/AdicionarPerfilModal';
+import Breadcrumbs from '../Layout/Breadcrumbs/Gerenciamento';
+import GerenciamentoPopover from '../Layout/GerenciamentoPopover';
+import Navbar from '../Layout/Navbar';
+import Sidebar from '../Layout/Sidebar';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -149,10 +148,10 @@ export default function Gerenciamento() {
             <Button><AdicionarPerfilModal /></Button>
           </Item>
         </Grid>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, ml: 1, pt: 10, }}>
-          VERSÃO DEMONSTRATIVA
-        </Box>
       </Grid>
+      <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', width: 1, pt: 10, }}>
+          VERSÃO DEMONSTRATIVA
+      </Box>
     </Box>
   );
 }

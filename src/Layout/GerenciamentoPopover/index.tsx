@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Popover from '@mui/material/Popover';
-import Button from '@mui/material/Button';
-import { BsThreeDotsVertical } from 'react-icons/bs';
 import { Box } from '@mui/material';
+import Button from '@mui/material/Button';
+import Popover from '@mui/material/Popover';
+import * as React from 'react';
+import { BsThreeDotsVertical } from 'react-icons/bs';
 
 
 const GerenciamentoPopoverConfig = {
@@ -10,7 +10,7 @@ const GerenciamentoPopoverConfig = {
   mt: -9,
 
   '@media (min-width: 2560px) ': {
-    ml: '42rem',
+    ml: '90%',
   }
 }
 
