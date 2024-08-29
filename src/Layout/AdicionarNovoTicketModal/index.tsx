@@ -1,10 +1,10 @@
-import * as React from 'react';
+import TextareaAutosize from '@mui/base/TextareaAutosize';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
-import TextareaAutosize from '@mui/base/TextareaAutosize';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 
 
 const style = {
@@ -158,7 +158,7 @@ export default function AdicionarTicketModal() {
             <TextareaAutosize
               aria-label="textarea"
               placeholder="Digite sua mensagem"
-              style={{ width: '96%', height: '4em', fontSize: 18, }}
+              style={{ width: '96.5%', height: '4em', fontSize: 18, }}
             />
 
           </Box>

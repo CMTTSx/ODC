@@ -66,6 +66,9 @@ const TabsConfig = {
   },
   '@media (min-width: 2560px) ': {
     ml: '75%',
+  },
+  '@media (min-width: 3840px) ': {
+    ml: '85%',
   }
 
 }
@@ -141,7 +144,7 @@ const Tab1Config = {
 
   '@media (min-width: 320px) ': {
     ml: '5%',
-  },  
+  },
 
 }
 
@@ -196,9 +199,9 @@ export default function BasicTabs() {
           <Dummybar />
         </Box>
         <Button sx={ButtonConfig}><AtendimentoModal /></Button>
-        <Box sx={{ textAlign: 'center', color: 'red', fontStyle: 'bold', pt: 10  }}>
+        <Box sx={{ textAlign: 'center', color: 'red', pt: 10, fontFamily: "sans-serif, Roboto, Helvetica, Arial, " }}>
           VERSÃO DEMONSTRATIVA
-      </Box>
+        </Box>
       </TabPanel>
       {/*Tabs 2*/}
       <TabPanel value={value} index={1}>

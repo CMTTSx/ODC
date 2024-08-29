@@ -89,7 +89,7 @@ const ButtonAddConfig = {
 
 export default function Clientes() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4', height: '50rem', width: 1, }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '100rem', width: 1, }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
           <Navbar />

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography } from '@mui/material';
 import AtendimentoPopover from '../AtendimentoPopover';
 
@@ -149,6 +148,10 @@ const TypoStatus = {
   },
   '@media (min-width: 2560px)': {
     ml: '61.5%',
+    mt: -3,
+  },
+  '@media (min-width: 3840px)': {
+    ml: '58.5%',
     mt: -3,
   },
 }

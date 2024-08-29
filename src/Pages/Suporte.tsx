@@ -381,7 +381,7 @@ const TypoVerificarNovoTicket = {
 
 export default function Suporte() {
   return (
-    <Box sx={{ backgroundColor: '#F6F4F4', height: '100%' }}>
+    <Box sx={{ backgroundColor: '#F6F4F4', height: '100rem' }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={20}>
           <Navbar />

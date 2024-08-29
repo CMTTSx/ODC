@@ -17,6 +17,10 @@ import Sidebar from '../Layout/Sidebar';
 const BoxConfig = {
   backgroundColor: '#F6F4F4',
   height: '50rem',
+
+  '@media (min-width: 2560px) ': {
+    height: '100rem'
+  },
 }
 
 const ContentConfig = {
