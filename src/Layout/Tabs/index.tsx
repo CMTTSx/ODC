@@ -199,7 +199,7 @@ export default function BasicTabs() {
           <Dummybar />
         </Box>
         <Button sx={ButtonConfig}><AtendimentoModal /></Button>
-        <Box sx={{ textAlign: 'center', color: 'red', pt: 10, fontFamily: "sans-serif, Roboto, Helvetica, Arial, " }}>
+        <Box sx={{ textAlign: 'center', color: 'red', pt: 23, }}>
           VERSÃO DEMONSTRATIVA
         </Box>
       </TabPanel>
